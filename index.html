@@ -24,7 +24,6 @@
             overflow-x: hidden;
         }
 
-        /* --- TOPO --- */
         header {
             border-bottom: 1px solid var(--dourado);
             padding: 20px;
@@ -39,9 +38,9 @@
         }
 
         .logo-empresa {
-            max-height: 120px;
+            max-height: 120px; /* Ajuste aqui para aumentar/diminuir o logo */
             width: auto;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         h1 { margin: 0; letter-spacing: 3px; text-transform: uppercase; font-size: 1.6rem; color: var(--dourado); }
@@ -63,7 +62,6 @@
 
         .nav-btn:hover { background: var(--dourado); color: var(--preto); }
 
-        /* --- CONTEÚDO --- */
         .container { padding: 20px; max-width: 1200px; margin: auto; min-height: 80vh; }
 
         .info-box {
@@ -89,7 +87,6 @@
             font-size: 1.2rem;
         }
 
-        /* --- GRID DE PRODUTOS --- */
         .grid-produtos {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -107,15 +104,10 @@
         }
 
         .card-produto:hover { border-color: var(--dourado); transform: translateY(-5px); }
-
         .card-produto img { width: 100%; height: 280px; object-fit: cover; border-bottom: 1px solid #333; }
-
         .card-info { padding: 15px; flex-grow: 1; text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
-
         .card-info h3 { margin: 5px 0; color: var(--branco); font-size: 1.1rem; }
-
         .card-info p { font-size: 0.85rem; color: #bbb; margin-bottom: 15px; min-height: 40px; }
-
         .preco { font-weight: bold; font-size: 1.4rem; color: var(--dourado-claro); display: block; margin-bottom: 15px; }
 
         .btn-carrinho {
@@ -133,7 +125,6 @@
 
         .btn-carrinho:hover { filter: brightness(1.2); }
 
-        /* --- CARRINHO FLUTUANTE (CORRIGIDO) --- */
         #carrinho-secao {
             position: fixed;
             bottom: 30px;
@@ -183,11 +174,9 @@
             margin-bottom: 15px;
         }
 
-        /* --- RODAPÉ --- */
         footer { text-align: center; padding: 50px 20px; border-top: 1px solid #222; margin-top: 60px; }
         .selo { border: 1px solid var(--dourado); padding: 10px 20px; font-size: 0.75rem; font-weight: bold; letter-spacing: 1px; display: inline-block; }
 
-        /* Mobile */
         @media (max-width: 600px) {
             #carrinho-secao { width: 85%; right: 5%; bottom: 40px; }
             h1 { font-size: 1.3rem; }
@@ -198,7 +187,7 @@
 <body>
 
 <header>
-    <img src="img/logotipo.jpg" alt="Muquilas Logo" class="logo-empresa">
+    <img src="logotipo.jpg" alt="Muquilas Logo" class="logo-empresa">
     <h1>Muquilas Fashion</h1>
     <nav>
         <button class="nav-btn" onclick="toggleSecao('quem-somos')">Quem Somos</button>
@@ -209,12 +198,12 @@
 <div class="container">
     <div id="quem-somos" class="info-box">
         <h3>Sobre a Muquilas Fashion</h3>
-        <p>Somos uma equipa focada no seu bem estar, cuidando da sua aparência e autoestima, ensinando como vestir bem seguindo a moda e novas tendências.</p>
+        <p>Muquilas fashion é uma equipa focada no seu bem estar, cuidando da sua aparência e autoestima, como vestir bem seguindo a moda e novas tendências.</p>
     </div>
 
     <div id="contato" class="info-box">
         <h3>Fale Conosco</h3>
-        <p><i class="fab fa-whatsapp"></i> 860404269 - Chamada e WhatsApp</p>
+        <p><i class="fab fa-whatsapp"></i> 866186976 - Chamada e WhatsApp</p>
     </div>
 
     <h2 class="categoria-titulo">Roupas</h2>
@@ -222,10 +211,10 @@
         <div class="card-produto">
             <img src="img/roupa1.jpg" alt="Roupa Exemplo">
             <div class="card-info">
-                <h3>Vestido Elegante</h3>
-                <p>Descrição do produto (se vazio não aparece).</p>
+                <h3>Nome da Roupa</h3>
+                <p>Descrição da peça.</p>
                 <span class="preco">2.500 MT</span>
-                <button class="btn-carrinho" onclick="addItem('Vestido Elegante', 2500)">Na Carrinha</button>
+                <button class="btn-carrinho" onclick="addItem('Nome da Roupa', 2500)">Na Carrinha</button>
             </div>
         </div>
     </div>
@@ -235,10 +224,10 @@
         <div class="card-produto">
             <img src="img/sapato1.jpg" alt="Sapato Exemplo">
             <div class="card-info">
-                <h3>Salto Fino Gold</h3>
-                <p>Conforto e estilo.</p>
-                <span class="preco">3.200 MT</span>
-                <button class="btn-carrinho" onclick="addItem('Salto Fino Gold', 3200)">Na Carrinha</button>
+                <h3>Nome do Sapato</h3>
+                <p>Descrição do modelo.</p>
+                <span class="preco">3.000 MT</span>
+                <button class="btn-carrinho" onclick="addItem('Nome do Sapato', 3000)">Na Carrinha</button>
             </div>
         </div>
     </div>
@@ -248,10 +237,10 @@
         <div class="card-produto">
             <img src="img/cabelo1.jpg" alt="Cabelo Exemplo">
             <div class="card-info">
-                <h3>Peruca Brasileira 22'</h3>
-                <p>Cabelo 100% humano.</p>
-                <span class="preco">14.000 MT</span>
-                <button class="btn-carrinho" onclick="addItem('Peruca Brasileira 22', 14000)">Na Carrinha</button>
+                <h3>Nome do Cabelo</h3>
+                <p>Polegadas e tipo.</p>
+                <span class="preco">10.000 MT</span>
+                <button class="btn-carrinho" onclick="addItem('Nome do Cabelo', 10000)">Na Carrinha</button>
             </div>
         </div>
     </div>
@@ -261,10 +250,10 @@
         <div class="card-produto">
             <img src="img/cosmetico1.jpg" alt="Cosmético Exemplo">
             <div class="card-info">
-                <h3>Kit de Maquiagem</h3>
-                <p>Produtos de alta qualidade.</p>
-                <span class="preco">1.800 MT</span>
-                <button class="btn-carrinho" onclick="addItem('Kit Maquiagem', 1800)">Na Carrinha</button>
+                <h3>Nome do Cosmético</h3>
+                <p>Benefícios do produto.</p>
+                <span class="preco">1.500 MT</span>
+                <button class="btn-carrinho" onclick="addItem('Nome do Cosmético', 1500)">Na Carrinha</button>
             </div>
         </div>
     </div>
@@ -279,14 +268,11 @@
     <h3 style="margin-top:0; font-size:1rem; border-bottom:1px solid var(--dourado); padding-bottom: 5px;">
         <i class="fas fa-shopping-cart"></i> Minha Carrinha
     </h3>
-    
     <ul id="itens-carrinho"></ul>
-    
     <div class="total-box">
         <span>Total:</span>
         <span><span id="total-val">0</span> MT</span>
     </div>
-    
     <button class="btn-carrinho" onclick="enviarWhatsApp()">
         COMPRAR PELO WHATSAPP <i class="fab fa-whatsapp"></i>
     </button>
@@ -311,7 +297,6 @@
         carrinho.push({nome, preco});
         totalGeral += preco;
         render();
-        // Abre o carrinho para o usuário ver o que adicionou
         document.getElementById('carrinho-secao').style.display = 'block';
     }
 
@@ -323,20 +308,17 @@
         const lista = document.getElementById('itens-carrinho');
         const displayTotal = document.getElementById('total-val');
         lista.innerHTML = '';
-        
         carrinho.forEach(item => {
             lista.innerHTML += `<li>${item.nome} <span>${item.preco.toLocaleString()} MT</span></li>`;
         });
-        
         displayTotal.innerText = totalGeral.toLocaleString();
     }
 
     function enviarWhatsApp() {
         if (carrinho.length === 0) return;
-
         const resumo = carrinho.map(i => i.nome).join(', ');
         const mensagem = `Olá Muquilas Fashion! Quero comprar os itens: (${resumo}) somando um total de ${totalGeral.toLocaleString()} MT.`;
-        const telefone = "258860407269"; // Número de destino
+        const telefone = "258866186976"; // Número atualizado
         
         const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
         window.open(url, '_blank');

@@ -11,20 +11,20 @@
             --preto: #0a0a0a;
             --dourado: #d4af37;
             --dourado-claro: #f1d592;
-            --cinza-escuro: #1a1a1a;
+            --cinza: #1a1a1a;
             --branco: #ffffff;
         }
 
         body {
             background-color: var(--preto);
             color: var(--dourado);
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* --- Header e Navegação (ATUALIZADO) --- */
+        /* --- TOPO --- */
         header {
             border-bottom: 1px solid var(--dourado);
             padding: 20px;
@@ -32,114 +32,91 @@
             position: sticky;
             top: 0;
             background: rgba(10, 10, 10, 0.98);
-            z-index: 100;
+            z-index: 1000;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Centraliza tudo horizontalmente */
-        }
-
-        /* Área do Logo */
-        .logo-container {
-            margin-bottom: 10px; /* Espaço entre logo e nome */
+            align-items: center;
         }
 
         .logo-empresa {
-            max-height: 80px; /* Ajuste a altura máxima do seu logo aqui */
-            width: auto;      /* Mantém a proporção */
-            display: block;
+            max-height: 120px;
+            width: auto;
+            margin-bottom: 20px;
         }
 
-        h1 { 
-            margin: 0; 
-            letter-spacing: 4px; 
-            text-transform: uppercase;
-            font-size: 2rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            color: var(--dourado);
-        }
+        h1 { margin: 0; letter-spacing: 3px; text-transform: uppercase; font-size: 1.6rem; color: var(--dourado); }
 
-        nav { margin-top: 15px; display: flex; flex-wrap: wrap; justify-content: center; }
+        nav { margin-top: 15px; }
 
         .nav-btn {
             background: transparent;
             border: 1px solid var(--dourado);
             color: var(--dourado);
-            padding: 8px 20px;
+            padding: 8px 15px;
             cursor: pointer;
-            transition: all 0.3s ease;
             margin: 5px;
             font-weight: bold;
             text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
+            font-size: 0.7rem;
+            transition: 0.3s;
         }
 
-        .nav-btn:hover {
-            background: var(--dourado);
-            color: var(--preto);
-            box-shadow: 0 0 10px var(--dourado);
-        }
+        .nav-btn:hover { background: var(--dourado); color: var(--preto); }
 
-        /* --- Seções de Informação --- */
-        .container { padding: 30px 15px; max-width: 1200px; margin: auto; min-height: 70vh; }
-        
+        /* --- CONTEÚDO --- */
+        .container { padding: 20px; max-width: 1200px; margin: auto; min-height: 80vh; }
+
         .info-box {
             display: none;
-            padding: 25px;
+            padding: 20px;
             border: 1px solid var(--dourado);
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             text-align: center;
-            background: var(--cinza-escuro);
-            animation: fadeIn 0.5s ease;
+            background: var(--cinza);
             border-radius: 8px;
+            animation: fadeIn 0.4s;
         }
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* --- Grid de Produtos --- */
+        .categoria-titulo {
+            border-left: 4px solid var(--dourado);
+            padding-left: 15px;
+            margin: 40px 0 20px;
+            text-transform: uppercase;
+            color: var(--branco);
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+        }
+
+        /* --- GRID DE PRODUTOS --- */
         .grid-produtos {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: 25px;
-            margin-top: 30px;
         }
 
         .card-produto {
-            background: var(--cinza-escuro);
-            border: 1px solid #333;
-            padding: 0;
-            text-align: center;
+            background: var(--cinza);
             border-radius: 12px;
             overflow: hidden;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            border: 1px solid #333;
+            transition: 0.3s;
             display: flex;
             flex-direction: column;
         }
 
-        .card-produto:hover {
-            transform: translateY(-5px);
-            border-color: var(--dourado);
-        }
+        .card-produto:hover { border-color: var(--dourado); transform: translateY(-5px); }
 
-        .card-produto img { 
-            width: 100%; 
-            height: 300px; 
-            object-fit: cover; 
-            border-bottom: 1px solid #333;
-        }
+        .card-produto img { width: 100%; height: 280px; object-fit: cover; border-bottom: 1px solid #333; }
 
-        .card-info { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;}
-        
-        .card-info h3 { margin: 5px 0; font-size: 1.3rem; color: var(--branco); }
-        .card-info p { font-size: 0.9rem; color: #aaa; margin: 5px 0 10px 0; }
-        
-        .preco { 
-            font-weight: bold; 
-            font-size: 1.4rem; 
-            display: block; 
-            margin: 10px 0; 
-            color: var(--dourado-claro);
-        }
+        .card-info { padding: 15px; flex-grow: 1; text-align: center; display: flex; flex-direction: column; justify-content: space-between; }
+
+        .card-info h3 { margin: 5px 0; color: var(--branco); font-size: 1.1rem; }
+
+        .card-info p { font-size: 0.85rem; color: #bbb; margin-bottom: 15px; min-height: 40px; }
+
+        .preco { font-weight: bold; font-size: 1.4rem; color: var(--dourado-claro); display: block; margin-bottom: 15px; }
 
         .btn-carrinho {
             background: linear-gradient(45deg, var(--dourado), var(--dourado-claro));
@@ -150,87 +127,79 @@
             cursor: pointer;
             font-weight: bold;
             text-transform: uppercase;
-            transition: 0.3s;
             border-radius: 6px;
-            font-size: 0.85rem;
+            transition: 0.3s;
         }
 
-        .btn-carrinho:hover { filter: brightness(1.1); transform: scale(1.02); }
+        .btn-carrinho:hover { filter: brightness(1.2); }
 
-        /* --- Carrinho Lateral Flutuante --- */
+        /* --- CARRINHO FLUTUANTE (CORRIGIDO) --- */
         #carrinho-secao {
             position: fixed;
-            bottom: 20px;
+            bottom: 30px;
             right: 20px;
-            background: rgba(0, 0, 0, 0.95);
+            background: #000;
             border: 2px solid var(--dourado);
-            padding: 15px;
+            padding: 18px;
             width: 300px;
-            max-height: 80vh;
-            overflow-y: auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-            border-radius: 12px;
-            z-index: 1000;
-            display: none; /* Escondido inicialmente, aparece quando tem item */
+            border-radius: 15px;
+            z-index: 9999;
+            display: none;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.9);
         }
 
-        #carrinho-secao h3 { margin-top: 0; color: var(--branco); border-bottom: 1px solid var(--dourado); padding-bottom: 10px;}
+        .fechar-carrinho {
+            float: right;
+            cursor: pointer;
+            color: var(--dourado);
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        #itens-carrinho {
+            list-style: none;
+            padding: 0;
+            max-height: 200px;
+            overflow-y: auto;
+            margin: 15px 0;
+            font-size: 0.9rem;
+        }
 
         #itens-carrinho li {
             border-bottom: 1px solid #333;
             padding: 8px 0;
             display: flex;
             justify-content: space-between;
-            font-size: 0.9rem;
-            color: #eee;
+            color: var(--branco);
         }
 
-        .carrinho-total {
-            margin-top: 15px;
+        .total-box {
+            border-top: 1px solid var(--dourado);
             padding-top: 10px;
-            font-size: 1.1rem;
             font-weight: bold;
-            color: var(--branco);
             display: flex;
             justify-content: space-between;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
         }
 
-        /* --- Selo e Rodapé --- */
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            background: #050505;
-            margin-top: auto;
-        }
+        /* --- RODAPÉ --- */
+        footer { text-align: center; padding: 50px 20px; border-top: 1px solid #222; margin-top: 60px; }
+        .selo { border: 1px solid var(--dourado); padding: 10px 20px; font-size: 0.75rem; font-weight: bold; letter-spacing: 1px; display: inline-block; }
 
-        .selo { 
-            border: 1px solid var(--dourado); 
-            padding: 8px 15px; 
-            display: inline-block; 
-            letter-spacing: 1px;
-            font-weight: bold;
-            font-size: 0.8rem;
-        }
-
-        /* --- Responsividade --- */
+        /* Mobile */
         @media (max-width: 600px) {
-            header { padding: 15px; }
-            .logo-empresa { max-height: 60px; }
-            h1 { font-size: 1.5rem; letter-spacing: 2px; }
-            #carrinho-secao { width: 85%; right: 5%; bottom: 10px; }
-            .grid-produtos { grid-template-columns: 1fr; } /* Uma coluna no mobile */
+            #carrinho-secao { width: 85%; right: 5%; bottom: 40px; }
+            h1 { font-size: 1.3rem; }
+            .grid-produtos { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-container">
-        <img src="logotipo.jpg" alt="Logo Muquilas Fashion" class="logo-empresa">
-    </div>
-
+    <img src="img/logotipo.jpg" alt="Muquilas Logo" class="logo-empresa">
     <h1>Muquilas Fashion</h1>
-
     <nav>
         <button class="nav-btn" onclick="toggleSecao('quem-somos')">Quem Somos</button>
         <button class="nav-btn" onclick="toggleSecao('contato')">Contacto</button>
@@ -239,63 +208,87 @@
 
 <div class="container">
     <div id="quem-somos" class="info-box">
-        <h3>Nossa Missão</h3>
-        <p>Muquilas fashion é uma equipa focada no seu bem estar, cuidando da sua aparência e autoestima, como vestir bem seguindo a moda e novas tendências.</p>
+        <h3>Sobre a Muquilas Fashion</h3>
+        <p>Somos uma equipa focada no seu bem estar, cuidando da sua aparência e autoestima, ensinando como vestir bem seguindo a moda e novas tendências.</p>
     </div>
 
     <div id="contato" class="info-box">
         <h3>Fale Conosco</h3>
-        <p><i class="fab fa-whatsapp" style="color: #25D366;"></i> <strong>860404269</strong><br>Chamada e WhatsApp</p>
+        <p><i class="fab fa-whatsapp"></i> 860404269 - Chamada e WhatsApp</p>
     </div>
 
-    <h2 style="text-align:center; text-transform:uppercase; letter-spacing:2px; margin-top:0;">Destaques</h2>
-
+    <h2 class="categoria-titulo">Roupas</h2>
     <div class="grid-produtos">
-        
         <div class="card-produto">
-            <img src="img/produto1.jpg" alt="Nome do Produto">
+            <img src="img/roupa1.jpg" alt="Roupa Exemplo">
             <div class="card-info">
-                <div>
-                    <h3>Nome do Produto</h3>
-                    <p>Descrição curta do produto.</p>
-                </div>
-                <div>
-                    <span class="preco">1.000 MT</span>
-                    <button class="btn-carrinho" onclick="addItem('Nome do Produto', 1000)">
-                        Na Carrinha <i class="fas fa-shopping-cart"></i>
-                    </button>
-                </div>
+                <h3>Vestido Elegante</h3>
+                <p>Descrição do produto (se vazio não aparece).</p>
+                <span class="preco">2.500 MT</span>
+                <button class="btn-carrinho" onclick="addItem('Vestido Elegante', 2500)">Na Carrinha</button>
             </div>
         </div>
+    </div>
 
+    <h2 class="categoria-titulo">Sapatos</h2>
+    <div class="grid-produtos">
         <div class="card-produto">
-            <img src="img/produto2.jpg" alt="Nome do Produto">
+            <img src="img/sapato1.jpg" alt="Sapato Exemplo">
             <div class="card-info">
-                <div>
-                    <h3>Nome do Produto</h3>
-                    <p>Descrição curta do produto.</p>
-                </div>
-                <div>
-                    <span class="preco">2.000 MT</span>
-                    <button class="btn-carrinho" onclick="addItem('Nome do Produto', 2000)">
-                        Na Carrinha <i class="fas fa-shopping-cart"></i>
-                    </button>
-                </div>
+                <h3>Salto Fino Gold</h3>
+                <p>Conforto e estilo.</p>
+                <span class="preco">3.200 MT</span>
+                <button class="btn-carrinho" onclick="addItem('Salto Fino Gold', 3200)">Na Carrinha</button>
             </div>
         </div>
-        
+    </div>
+
+    <h2 class="categoria-titulo">Cabelos</h2>
+    <div class="grid-produtos">
+        <div class="card-produto">
+            <img src="img/cabelo1.jpg" alt="Cabelo Exemplo">
+            <div class="card-info">
+                <h3>Peruca Brasileira 22'</h3>
+                <p>Cabelo 100% humano.</p>
+                <span class="preco">14.000 MT</span>
+                <button class="btn-carrinho" onclick="addItem('Peruca Brasileira 22', 14000)">Na Carrinha</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="categoria-titulo">Cosméticos</h2>
+    <div class="grid-produtos">
+        <div class="card-produto">
+            <img src="img/cosmetico1.jpg" alt="Cosmético Exemplo">
+            <div class="card-info">
+                <h3>Kit de Maquiagem</h3>
+                <p>Produtos de alta qualidade.</p>
+                <span class="preco">1.800 MT</span>
+                <button class="btn-carrinho" onclick="addItem('Kit Maquiagem', 1800)">Na Carrinha</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="categoria-titulo">Outros Produtos</h2>
+    <div class="grid-produtos">
         </div>
 </div>
 
 <div id="carrinho-secao">
-    <h3><i class="fas fa-shopping-bag"></i> Carrinha</h3>
-    <ul id="itens-carrinho" style="list-style: none; padding: 0;"></ul>
-    <div class="carrinho-total">
+    <span class="fechar-carrinho" onclick="fecharCarrinho()">&times;</span>
+    <h3 style="margin-top:0; font-size:1rem; border-bottom:1px solid var(--dourado); padding-bottom: 5px;">
+        <i class="fas fa-shopping-cart"></i> Minha Carrinha
+    </h3>
+    
+    <ul id="itens-carrinho"></ul>
+    
+    <div class="total-box">
         <span>Total:</span>
-        <span id="total-val">0 MT</span>
+        <span><span id="total-val">0</span> MT</span>
     </div>
-    <button class="btn-carrinho" style="margin-top: 15px;" onclick="enviarWhatsApp()">
-        FINALIZAR COMPRA <i class="fab fa-whatsapp"></i>
+    
+    <button class="btn-carrinho" onclick="enviarWhatsApp()">
+        COMPRAR PELO WHATSAPP <i class="fab fa-whatsapp"></i>
     </button>
 </div>
 
@@ -305,44 +298,47 @@
 
 <script>
     let carrinho = [];
-    let valorTotal = 0;
+    let totalGeral = 0;
 
     function toggleSecao(id) {
-        const box = document.getElementById(id);
+        const el = document.getElementById(id);
         const todas = document.querySelectorAll('.info-box');
         todas.forEach(s => { if(s.id !== id) s.style.display = 'none'; });
-        box.style.display = (box.style.display === 'block') ? 'none' : 'block';
-        if(box.style.display === 'block') box.scrollIntoView({behavior: "smooth"});
+        el.style.display = (el.style.display === 'block') ? 'none' : 'block';
     }
 
     function addItem(nome, preco) {
-        carrinho.push({ nome, preco });
-        valorTotal += preco;
-        renderCarrinho();
-        // Mostra o carrinho ao adicionar primeiro item
+        carrinho.push({nome, preco});
+        totalGeral += preco;
+        render();
+        // Abre o carrinho para o usuário ver o que adicionou
         document.getElementById('carrinho-secao').style.display = 'block';
     }
 
-    function renderCarrinho() {
+    function fecharCarrinho() {
+        document.getElementById('carrinho-secao').style.display = 'none';
+    }
+
+    function render() {
         const lista = document.getElementById('itens-carrinho');
-        const totalDisplay = document.getElementById('total-val');
+        const displayTotal = document.getElementById('total-val');
         lista.innerHTML = '';
         
-        carrinho.forEach((item) => {
+        carrinho.forEach(item => {
             lista.innerHTML += `<li>${item.nome} <span>${item.preco.toLocaleString()} MT</span></li>`;
         });
         
-        totalDisplay.innerHTML = valorTotal.toLocaleString() + " MT";
+        displayTotal.innerText = totalGeral.toLocaleString();
     }
 
     function enviarWhatsApp() {
         if (carrinho.length === 0) return;
 
-        const listaItens = carrinho.map(i => i.nome).join(', ');
-        const textoMsg = `Olá Muquilas Fashion! quero comprar os itens (${listaItens}) somando um total de ${valorTotal.toLocaleString()} MT.`;
-        const numeroWhats = "258860407269"; // Número de finalização
+        const resumo = carrinho.map(i => i.nome).join(', ');
+        const mensagem = `Olá Muquilas Fashion! Quero comprar os itens: (${resumo}) somando um total de ${totalGeral.toLocaleString()} MT.`;
+        const telefone = "258860407269"; // Número de destino
         
-        const url = `https://wa.me/${numeroWhats}?text=${encodeURIComponent(textoMsg)}`;
+        const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
         window.open(url, '_blank');
     }
 </script>

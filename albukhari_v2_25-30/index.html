@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Islam Moçambique - Sahih al-Bukhari Volume 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a5f3f;
+            --primary-light: #2d8a5e;
+            --primary-dark: #0d3d28;
+            --gold: #c9a227;
+            --gold-light: #e8d5a3;
+            --bg: #f8f9f5;
+            --card: #ffffff;
+            --text: #2c3e2d;
+            --text-light: #5a6b5c;
+            --border: #d4e0d4;
+            --shadow: 0 4px 20px rgba(26, 95, 63, 0.08);
+            --shadow-hover: 0 8px 30px rgba(26, 95, 63, 0.15);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 4px;
+        }
+        .header .author {
+            font-size: 0.95rem;
+            opacity: 0.75;
+            font-style: italic;
+        }
+        .header .badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--primary-dark);
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-top: 15px;
+            box-shadow: 0 2px 10px rgba(201, 162, 39, 0.3);
+        }
+        /* Navigation */
+        .nav-bar {
+            background: var(--card);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+        .nav-btn {
+            flex-shrink: 0;
+            padding: 10px 18px;
+            border: 2px solid var(--border);
+            background: var(--card);
+            color: var(--text);
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .nav-btn:hover, .nav-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        /* Main Content */
+        .main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        /* Book Section */
+        .book-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        .book-section.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .book-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow-hover);
+            position: relative;
+            overflow: hidden;
+        }
+        .book-header::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: var(--gold);
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+        .book-number {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--primary-dark);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .book-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .book-arabic {
+            font-family: 'Amiri', serif;
+            font-size: 1.4rem;
+            opacity: 0.85;
+            direction: rtl;
+        }
+        .book-desc {
+            margin-top: 10px;
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+        /* Chapter */
+        .chapter {
+            background: var(--card);
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        .chapter:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+        .chapter-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border);
+        }
+        .chapter-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        .chapter-info h3 {
+            font-size: 1.1rem;
+            color: var(--primary-dark);
+            margin-bottom: 3px;
+        }
+        .chapter-info .chapter-arabic {
+            font-family: 'Amiri', serif;
+            color: var(--primary);
+            font-size: 1rem;
+            direction: rtl;
+        }
+        /* Hadith */
+        .hadith {
+            background: linear-gradient(135deg, #fafbf8 0%, #f5f7f2 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-right: 4px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+        .hadith:hover {
+            background: linear-gradient(135deg, #f5f7f2 0%, #eef1ea 100%);
+            border-right-width: 6px;
+        }
+        .hadith-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .hadith-number {
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .hadith-grade {
+            background: var(--gold-light);
+            color: var(--primary-dark);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .hadith-narrator {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            border-left: 3px solid var(--gold);
+        }
+        .hadith-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+        .hadith-arabic {
+            font-family: 'Amiri', serif;
+            font-size: 1.3rem;
+            line-height: 2;
+            color: var(--primary-dark);
+            direction: rtl;
+            text-align: right;
+            background: rgba(26, 95, 63, 0.03);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .hadith-reference {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            text-align: right;
+        }
+        /* Footer */
+        .footer {
+            background: var(--primary-dark);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+        .footer p { opacity: 0.8; font-size: 0.9rem; }
+        /* Scrollbar */
+        .nav-container::-webkit-scrollbar { height: 4px; }
+        .nav-container::-webkit-scrollbar-track { background: transparent; }
+        .nav-container::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius: 4px; }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.5rem; }
+            .book-title { font-size: 1.3rem; }
+            .nav-btn { padding: 8px 14px; font-size: 0.8rem; }
+            .chapter { padding: 18px; }
+            .hadith-arabic { font-size: 1.1rem; }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>📚 Biblioteca Islam Moçambique</h1>
+            <p class="subtitle">Sahih al-Bukhari - صحيح البخاري</p>
+            <p class="author">Imam Muhammad ibn Ismail al-Bukhari (194-256 H)</p>
+            <span class="badge">Volume 2 - Livros 25-30</span>
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <button class="nav-btn active" onclick="showBook(25)">25. Al-Buyu'</button>
+            <button class="nav-btn" onclick="showBook(26)">26. Al-Hawala</button>
+            <button class="nav-btn" onclick="showBook(27)">27. Al-Kafala</button>
+            <button class="nav-btn" onclick="showBook(28)">28. Al-Wakala</button>
+            <button class="nav-btn" onclick="showBook(29)">29. Al-Muzara'a</button>
+            <button class="nav-btn" onclick="showBook(30)">30. Al-Musaqat</button>
+        </div>
+    </nav>
+
+    <main class="main">
+
+        <!-- LIVRO 26: AL-HAWALA -->
+        <section class="book-section" id="book-26">
+            <div class="book-header">
+                <span class="book-number">LIVRO 26</span>
+                <h2 class="book-title">Livro das Transferências de Dívida</h2>
+                <p class="book-arabic">كتاب الحوالة</p>
+                <p class="book-desc">Este livro trata da transferência de dívidas de uma pessoa para outra (hawala), suas condições e aplicações na vida cotidiana dos muçulmanos.</p>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">1</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Permissão da Transferência de Dívida (Hawala)</h3>
+                        <p class="chapter-arabic">باب الْحِلَّةِ فِي الْحَوَالَةِ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2000</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Abu Huraira (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        Um homem que devia a outro veio ao Profeta ﷺ e disse: "Ó Mensageiro de Allah, eu devo a esta pessoa e não tenho como pagá-la." O Profeta ﷺ disse: "Dê-lhe o que você tiver, mesmo que seja apenas um cão morto." O homem disse: "Não tenho nada." O Profeta ﷺ disse: "Então vá trabalhar para ele até que você pague sua dívida."
+                    </div>
+                    <div class="hadith-arabic">
+                        أَنَّ رَجُلاً كَانَ عَلَيْهِ دَيْنٌ لِرَجُلٍ، فَأَتَى النَّبِيَّ صلى الله عليه وسلم فَقَالَ: إِنَّ هَذَا الرَّجُلَ يُتَبِّعُنِي، وَلَيْسَ لِي شَىْءٌ أُعْطِيهِ. فَقَالَ: "أَعْطِهِ مَا وَجَدْتَ، وَلَوْ كَانَ عَظْمًا حُلْوَمًا". قَالَ: مَا وَجَدْتُ شَيْئًا. قَالَ: "اذْهَبْ فَاعْمَلْ عَلَيْهِ حَتَّى تُؤَدِّيَ إِلَيْهِ"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 26, Hadith 2000</div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2001</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Abu Huraira (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ disse: "A alma do muçulmano está suspensa por sua dívida até que seja paga."
+                    </div>
+                    <div class="hadith-arabic">
+                        قَالَ النَّبِيُّ صلى الله عليه وسلم: "نَفْسُ الْمُؤْمِنِ مُعَلَّقَةٌ بِدَيْنِهِ حَتَّى يُقْضَى عَنْهُ"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 26, Hadith 2001</div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">2</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Transferência da Dívida com Consentimento do Credor</h3>
+                        <p class="chapter-arabic">باب مَنْ حَالَ عَنْ دَيْنٍ فَأَجَازَهُ الْمُحَالُ إِلَيْهِ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2003</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Abu Huraira (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ disse: "A transferência de dívida (hawala) é válida quando o credor concorda em aceitar o devedor substituto."
+                    </div>
+                    <div class="hadith-arabic">
+                        قَالَ النَّبِيُّ صلى الله عليه وسلم: "الْحَوَالَةُ جَائِزَةٌ عَلَى أَنْ يَرْضَى الْمُطَالَبُ بِالْمُحَالِ عَلَيْهِ"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 26, Hadith 2003</div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">3</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Proibição de Adiar o Pagamento sem Justificativa</h3>
+                        <p class="chapter-arabic">باب تَأْخِيرِ الْمُفْلِسِ عَنْ قَضَاءِ دَيْنِهِ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2005</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Abu Huraira (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ disse: "Quem adia o pagamento de uma dívida quando tem capacidade de pagar, sua honra e justiça serão questionadas."
+                    </div>
+                    <div class="hadith-arabic">
+                        قَالَ النَّبِيُّ صلى الله عليه وسلم: "مَطْلُ الْغَنِيِّ ظُلْمٌ، وَإِذَا أُتْبِعَ أَحَدُكُمْ عَلَى مَلِيٍّ فَلْيَتْبَعْ"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 26, Hadith 2005</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIVRO 29: AL-MUZARA'A -->
+        <section class="book-section" id="book-29">
+            <div class="book-header">
+                <span class="book-number">LIVRO 29</span>
+                <h2 class="book-title">Livro da Agricultura/Parcerias Agrícolas</h2>
+                <p class="book-arabic">كتاب المزارعة</p>
+                <p class="book-desc">Este livro trata das regras sobre parcerias agrícolas (muzara'a), onde o proprietário da terra e o trabalhador compartilham a produção de acordo com condições acordadas.</p>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">1</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Permissão da Parceria Agrícola (Muzara'a)</h3>
+                        <p class="chapter-arabic">باب مُزَارَعَةِ الأَرْضِ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2020</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Rafi' ibn Khadij (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Mensageiro de Allah ﷺ proibiu a muzara'a (arrendamento de terra por parte da produção) no início, mas depois permitiu quando viu que havia necessidade. Ele disse: "Quem trabalha a terra, que o faça por uma parte conhecida da produção."
+                    </div>
+                    <div class="hadith-arabic">
+                        نَهَى رَسُولُ اللَّهِ صلى الله عليه وسلم عَنِ الْمُزَارَعَةِ، ثُمَّ رَخَّصَ فِيهَا. قَالَ: "مَنْ زَرَعَ فَلْيَزْرَعْ عَلَى حِصَّةٍ مَعْلُومَةٍ"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 29, Hadith 2020</div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2021</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Ibn Umar (رضي الله عنهما)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ fez um contrato de muzara'a com os judeus de Khaybar, permitindo-lhes cultivar a terra em troca de metade dos frutos e grãos produzidos.
+                    </div>
+                    <div class="hadith-arabic">
+                            كَانَ النَّبِيُّ صلى الله عليه وسلم يُزَارِعُ يَهُودَ خَيْبَرَ عَلَى الشَّطْرِ مِنْ ثِمَارِهَا وَزُرُوعِهَا
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 29, Hadith 2021</div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">2</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Proibição de Arrendar por Dinheiro Fixo</h3>
+                        <p class="chapter-arabic">باب كِرَاءِ الأَرْضِ بِالطَّعَامِ أَوِ الذَّهَبِ وَالْفِضَّةِ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2023</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Ibn Abbas (رضي الله عنهما)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ proibiu arrendar terras por um pagamento fixo em dinheiro ou alimentos. Ele disse: "Não arrendeis a terra por ouro ou prata. Arrendai-a por uma parte da produção."
+                    </div>
+                    <div class="hadith-arabic">
+                        نَهَى النَّبِيُّ صلى الله عليه وسلم عَنْ كِرَاءِ الأَرْضِ بِالذَّهَبِ وَالْفِضَّةِ. قَالَ: "لاَ تَكْرُوا الأَرْضَ بِالذَّهَبِ وَالْفِضَّةِ، وَلَكِنْ كْرُوهَا بِالْحُصُصِ"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 29, Hadith 2023</div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">3</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Parceria em Árvores Frutíferas</h3>
+                        <p class="chapter-arabic">باب مُسَاقَاةِ النَّخْلِ وَالْعِنَبِ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2025</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Jabir ibn Abdullah (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ proibiu a venda de frutas até que começassem a amadurecer, e proibiu a muzara'a e a musaqah (parceria em irrigação) até que as condições fossem claramente definidas.
+                    </div>
+                    <div class="hadith-arabic">
+                        نَهَى النَّبِيُّ صلى الله عليه وسلم عَنْ بَيْعِ الثِّمَارِ حَتَّى يَبْدُوَ صَلاَحُهَا، وَعَنِ الْمُزَارَعَةِ وَالْمُسَاقَاةِ إِلاَّ بِعِلْمٍ
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 29, Hadith 2025</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIVRO 27: AL-KAFALA -->
+        <section class="book-section" id="book-27">
+            <div class="book-header">
+                <span class="book-number">LIVRO 27</span>
+                <h2 class="book-title">Livro da Fiança/Garantia</h2>
+                <p class="book-arabic">كتاب الكفالة</p>
+                <p class="book-desc">Este livro aborda o conceito de kafala (fiança ou garantia) no Islam, suas regras e aplicações em transações e obrigações sociais.</p>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">1</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Permissão da Fiança (Kafala)</h3>
+                        <p class="chapter-arabic">باب الْكَفَالَةِ فِي الدِّيَانَاتِ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2010</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Abu Huraira (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Mensageiro de Allah ﷺ disse: "A garantia (kafala) é uma responsabilidade que deve ser cumprida. Quem garante uma dívida, deve pagá-la se o devedor original não o fizer."
+                    </div>
+                    <div class="hadith-arabic">
+                        قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: "الضَّمَانُ مَضْمُونَةٌ، وَمَنْ كَفَلَ دَيْنًا فَلْيُؤَدِّهِ إِنْ لَمْ يُؤَدِّهِ صَاحِبُهُ"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 27, Hadith 2010</div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">2</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Garantia de Resgate de Prisioneiros</h3>
+                        <p class="chapter-arabic">باب فَدَاءِ الأَسْرَى وَكَفَالَتِهِمْ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2012</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Aisha (رضي الله عنها)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ enviou alguns companheiros em uma expedição e eles foram capturados. Ele então enviou mensageiros para garantir o resgate deles, dizendo: "Liberte meus companheiros e eu garantirei o pagamento do resgate."
+                    </div>
+                    <div class="hadith-arabic">
+                        بَعَثَ النَّبِيُّ صلى الله عليه وسلم بَعْضَ أَصْحَابِهِ فَأُسِرُوا، فَبَعَثَ رُسُلاً يَكْفُلُونَ فِدَاءَهُمْ، فَقَالَ: "أَطْلِقُوا أَصْحَابِي وَأَنَا أَضْمَنُ لَكُمْ فِدَاءَهُمْ"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 27, Hadith 2012</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIVRO 25: AL-BUYU' -->
+        <section class="book-section active" id="book-25">
+            <div class="book-header">
+                <span class="book-number">LIVRO 25</span>
+                <h2 class="book-title">Livro das Transações (Vendas)</h2>
+                <p class="book-arabic">كتاب البيوع</p>
+                <p class="book-desc">Este livro aborda as regras do comércio, contratos de venda, proibições comerciais, e as condições éticas das transações no Islam.</p>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">1</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Permissão da Venda</h3>
+                        <p class="chapter-arabic">باب إِذَا بَاعَ تَصَدَّقَ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 1970</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Jabir ibn Abdullah (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Mensageiro de Allah ﷺ disse: "Que Allah tenha misericórdia de um homem que é generoso quando vende, quando compra e quando cobra o que lhe é devido."
+                    </div>
+                    <div class="hadith-arabic">
+                        قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: "رَحِمَ اللَّهُ رَجُلاً سَمْحًا إِذَا بَاعَ، وَإِذَا اشْتَرَى، وَإِذَا اقْتَضَى"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 25, Hadith 1970</div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 1971</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Abu Huraira (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ disse: "Allah disse: 'Eu sou o Terceiro dos dois parceiros (em uma transação comercial) enquanto um deles não trair o outro. Se um trair o outro, Eu me afasto deles.'"
+                    </div>
+                    <div class="hadith-arabic">
+                        قَالَ النَّبِيُّ صلى الله عليه وسلم: "إِنَّ اللَّهَ يَقُولُ: أَنَا ثَالِثُ الشَّرِيكَيْنِ مَا لَمْ يَخُنْ أَحَدُهُمَا صَاحِبَهُ، فَإِذَا خَانَهُ خَرَجْتُ مِنْ بَيْنِهِمَا"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 25, Hadith 1971</div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">2</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Proibição da Gharar (Incerteza) nas Vendas</h3>
+                        <p class="chapter-arabic">باب بَيْعِ الْحَصَاةِ وَبَيْعِ الْغَرَرِ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 1973</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Abu Huraira (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ proibiu a venda por pedras (al-hassah) — onde o comprador lança uma pedra e o que ela atinge é o que ele compra — e a venda por gharar (incerteza).
+                    </div>
+                    <div class="hadith-arabic">
+                        نَهَى النَّبِيُّ صلى الله عليه وسلم عَنْ بَيْعِ الْحَصَاةِ، وَعَنْ بَيْعِ الْغَرَرِ
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 25, Hadith 1973</div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 1974</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Abdullah ibn Umar (رضي الله عنهما)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ proibiu a venda de frutas até que estejam maduras e livres de doenças. Foi perguntado: "O que significa 'livres de doenças'?" Ele respondeu: "Até que fiquem vermelhas (ou amarelas)."
+                    </div>
+                    <div class="hadith-arabic">
+                        نَهَى النَّبِيُّ صلى الله عليه وسلم عَنْ بَيْعِ الثَّمَرَةِ حَتَّى يَبْدُوَ صَلاَحُهَا، نَهَى الْبَائِعَ وَالْمُشْتَرِيَ. قِيلَ: يَا رَسُولَ اللَّهِ وَمَا صَلاَحُهَا؟ قَالَ: "أَنْ تَحْمَرَّ وَتَصْفَرَّ"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 25, Hadith 1974</div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">3</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Proibição de Vender Alimentos Antes de Recebê-los</h3>
+                        <p class="chapter-arabic">باب بَيْعِ الطَّعَامِ قَبْلَ أَنْ يُسْتَوْفَى</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 1976</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Ibn Abbas (رضي الله عنهما)</div>
+                    <div class="hadith-text">
+                        O Mensageiro de Allah ﷺ disse: "Quem compra alimentos não deve vendê-los até que os tenha recebido em plena posse."
+                    </div>
+                    <div class="hadith-arabic">
+                        قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم: "مَنِ ابْتَاعَ طَعَامًا فَلاَ يَبِعْهُ حَتَّى يَقْبِضَهُ"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 25, Hadith 1976</div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 1977</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Hakim ibn Hizam (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        Eu disse: "Ó Mensageiro de Allah, uma pessoa vem até mim e quer que eu venda algo que não tenho em minha posse, devo comprá-lo do mercado para entregá-lo?" O Profeta ﷺ disse: "Não vendas o que não está em tua posse."
+                    </div>
+                    <div class="hadith-arabic">
+                        قُلْتُ: يَا رَسُولَ اللَّهِ، يَأْتِينِي الرَّجُلُ يَسْأَلُنِي الْبَيْعَ وَلَيْسَ عِنْدِي، أَفَأَبْتَاعُ لَهُ مِنَ السُّوقِ؟ فَقَالَ: "لاَ تَبِعْ مَا لَيْسَ عِنْدَكَ"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 25, Hadith 1977</div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">4</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Permissão de Vender Animais por Animais do Mesmo Tipo com Condições</h3>
+                        <p class="chapter-arabic">باب بَيْعِ الإِبِلِ بِالإِبِلِ مِنْ رِبَا الْفَضْلِ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 1979</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Abu Sa'id al-Khudri (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ disse: "Não vendam ouro por ouro, prata por prata, trigo por trigo, cevada por cevada, tâmaras por tâmaras, sal por sal, exceto em igualdade e com entrega imediata. Podem vender ouro por prata, prata por ouro, trigo por cevada, e cevada por trigo, desde que seja com entrega imediata."
+                    </div>
+                    <div class="hadith-arabic">
+                        قَالَ النَّبِيُّ صلى الله عليه وسلم: "لاَ تَبِيعُوا الذَّهَبَ بِالذَّهَبِ وَلاَ الْفِضَّةَ بِالْفِضَّةِ وَلاَ الْبُرَّ بِالْبُرِّ وَلاَ الشَّعِيرَ بِالشَّعِيرِ وَلاَ التَّمْرَ بِالتَّمْرِ وَلاَ الْمِلْحَ بِالْمِلْحِ، إِلاَّ مِثْلاً بِمِثْلٍ، يَدًا بِيَدٍ، فَمَنْ زَادَ أَوِ اسْتَزَادَ فَقَدْ أَرْبَى، وَالرَّاجِعُ فِيهِمَا الرِّبَا"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 25, Hadith 1979</div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">5</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Venda por Crédito (Salam)</h3>
+                        <p class="chapter-arabic">باب السَّلَمِ فِي الثِّمَارِ وَالطَّعَامِ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 1981</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Ibn Abbas (رضي الله عنهما)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ veio a Medina e encontrou o povo fazendo salam (venda por entrega futura) por frutas por um ou dois anos à frente. Ele disse: "Quem faz salam, que o faça por peso e medida conhecidos, por um prazo conhecido."
+                    </div>
+                    <div class="hadith-arabic">
+                        قَدِمَ النَّبِيُّ صلى الله عليه وسلم الْمَدِينَةَ وَهُمْ يُسَلِّفُونَ فِي الثِّمَارِ السَّنَتَيْنِ وَالثَّلاَثَ، فَقَالَ: "مَنْ أَسْلَفَ فِي شَىْءٍ فَلْيُسَلِّفْ فِي كَيْلٍ مَعْلُومٍ وَوَزْنٍ مَعْلُومٍ إِلَى أَجَلٍ مَعْلُومٍ"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 25, Hadith 1981</div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">6</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: O Direito de Desistir da Compra (Khiyar)</h3>
+                        <p class="chapter-arabic">باب الشُّفْعَةِ وَالْخِيَارِ فِي الْبَيْعِ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 1983</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Abu Huraira (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ disse: "Ambas as partes em uma venda têm o direito de desistir enquanto não se separarem. Se ambos forem verdadeiros e descreverem claramente (a mercadoria), serão abençoados em sua transação. Se ocultarem defeitos e mentirem, será removida a bênção de sua transação."
+                    </div>
+                    <div class="hadith-arabic">
+                        قَالَ النَّبِيُّ صلى الله عليه وسلم: "الْبَيِّعَانِ بِالْخِيَارِ مَا لَمْ يَتَفَرَّقَا، فَإِنْ صَدَقَا وَبَيَّنَا بُورِكَ لَهُمَا فِي بَيْعِهِمَا، وَإِنْ كَتَمَا وَكَذَبَا مُحِقَتْ بَرَكَةُ بَيْعِهِمَا"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 25, Hadith 1983</div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">7</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: O Direito de Preempção (Shuf'a)</h3>
+                        <p class="chapter-arabic">باب الشُّفْعَةِ فِي الرِّقَاعِ وَالدُّورِ وَالْحُقُولِ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 1985</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Jabir ibn Abdullah (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ decretou o direito de shuf'a (preempção) para o vizinho e o parceiro em uma propriedade compartilhada. Quando as fronteiras são estabelecidas e os caminhos são delimitados, não há mais shuf'a.
+                    </div>
+                    <div class="hadith-arabic">
+                        قَضَى النَّبِيُّ صلى الله عليه وسلم بِالشُّفْعَةِ فِي كُلِّ مَا لَمْ يُقْسَمْ، فَإِذَا وَقَعَتِ الْحُدُودُ وَصُرِّفَتِ الطُّرُقُ فَلاَ شُفْعَةَ
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 25, Hadith 1985</div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">8</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Proibição de Vender Frutas Antes da Colheita</h3>
+                        <p class="chapter-arabic">باب بَيْعِ الثِّمَارِ قَبْلَ أَنْ يَبْدُوَ صَلاَحُهَا</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 1987</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Anas ibn Malik (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ proibiu vender frutas até que estejam livres de doenças (maduras). Foi perguntado: "O que significa livres de doenças?" Ele disse: "Até que fiquem vermelhas." E acrescentou: "Vede se Allah envia calamidade sobre elas (antes da colheita), como queimadura ou geadas."
+                    </div>
+                    <div class="hadith-arabic">
+                        نَهَى النَّبِيُّ صلى الله عليه وسلم عَنْ بَيْعِ الثِّمَارِ حَتَّى يَبْدُوَ صَلاَحُهَا، قِيلَ: وَمَا صَلاَحُهَا؟ قَالَ: "أَنْ تَحْمَرَّ"، قَالَ: "أَرَأَيْتَ إِنْ بَعَثَ اللَّهُ عَلَيْهَا عَذَابًا أَوْ حَرِيقًا؟"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 25, Hadith 1987</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIVRO 28: AL-WAKALA -->
+        <section class="book-section" id="book-28">
+            <div class="book-header">
+                <span class="book-number">LIVRO 28</span>
+                <h2 class="book-title">Livro da Representação/Agência</h2>
+                <p class="book-arabic">كتاب الوكالة</p>
+                <p class="book-desc">Este livro trata do conceito de wakalah (representação ou agência), onde uma pessoa autoriza outra a agir em seu nome em transações comerciais ou pessoais.</p>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">1</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Permissão da Representação (Wakalah)</h3>
+                        <p class="chapter-arabic">باب الْوِكَالَةِ فِي الْبَيْعِ وَالشِّرَاءِ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2015</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Jabir ibn Abdullah (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ enviou alguns de seus companheiros como representantes (wukala) para coletar o zakat. Um deles retornou e disse: "Ó Mensageiro de Allah, esta é para você e esta foi dada a mim como presente." O Profeta ﷺ disse: "Por que você não se sentou em casa de teus pais para ver se te dariam presentes se fosses verdadeiro?"
+                    </div>
+                    <div class="hadith-arabic">
+                        بَعَثَ النَّبِيُّ صلى الله عليه وسلم وُكَلاَءَهُ لِيَأْخُذُوا الصَّدَقَةَ، فَلَمَّا جَاءَ أَحَدُهُمْ قَالَ: هَذَا لَكَ وَهَذَا أُهْدِيَ لِي. فَقَالَ: "أَفَلاَ جَلَسْتَ فِي بَيْتِ أَبِيكَ وَأُمِّكَ حَتَّى يَأْتِيَكَ هَدِيَّتُكَ إِنْ كُنْتَ صَادِقًا؟"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 28, Hadith 2015</div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2016</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Abu Huraira (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ disse: "Quando você envia alguém como seu representante (wakil), escolha alguém confiável e honesto. O representante é como um espelho que reflete a confiança de quem o enviou."
+                    </div>
+                    <div class="hadith-arabic">
+                        قَالَ النَّبِيُّ صلى الله عليه وسلم: "إِذَا وَكَّلْتَ رَجُلاً فَانْظُرْ إِلَى مَنْ تُوَكِّلُ، فَإِنَّ الْوَكِيلَ مِرْآةُ الْمُوَكِّلِ"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 28, Hadith 2016</div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">2</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Representação na Venda e Compra</h3>
+                        <p class="chapter-arabic">باب مَنْ بَاعَ وَاشْتَرَى بِوِكَالَةٍ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2018</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Ibn Umar (رضي الله عنهما)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ disse: "A representação (wakalah) em transações comerciais é válida desde que o representante não exceda os limites estabelecidos por quem o nomeou."
+                    </div>
+                    <div class="hadith-arabic">
+                        قَالَ النَّبِيُّ صلى الله عليه وسلم: "الْوِكَالَةُ فِي الْبَيْعِ وَالشِّرَاءِ جَائِزَةٌ مَا لَمْ يَتَجَاوَزِ الْوَكِيلُ حُدُودَ مُوَكِّلِهِ"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 28, Hadith 2018</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIVRO 30: AL-MUSAQAT -->
+        <section class="book-section" id="book-30">
+            <div class="book-header">
+                <span class="book-number">LIVRO 30</span>
+                <h2 class="book-title">Livro da Irrigação</h2>
+                <p class="book-arabic">كتاب المساقاة</p>
+                <p class="book-desc">Este livro trata das regras sobre musaqah (parceria de irrigação), onde uma pessoa cuida de árvores frutíferas em troca de uma parte da produção, especialmente em relação a tamareiras e videiras.</p>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">1</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Permissão da Musaqah (Irrigação)</h3>
+                        <p class="chapter-arabic">باب الْمُسَاقَاةِ فِي النَّخْلِ وَالْعِنَبِ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2030</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Rafi' ibn Khadij (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Mensageiro de Allah ﷺ proibiu a muzara'a (arrendamento por parte da produção) no início, mas depois permitiu quando viu necessidade. Também permitiu a musaqah (irrigar árvores em troca de frutas), desde que as condições fossem claramente definidas.
+                    </div>
+                    <div class="hadith-arabic">
+                        نَهَى رَسُولُ اللَّهِ صلى الله عليه وسلم عَنِ الْمُزَارَعَةِ، ثُمَّ رَخَّصَ فِيهَا، وَرَخَّصَ فِي الْمُسَاقَاةِ
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 30, Hadith 2030</div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2031</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Jabir ibn Abdullah (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ fez um contrato de musaqah com os judeus de Khaybar, permitindo-lhes cuidar das tamareiras e videiras em troca de metade dos frutos.
+                    </div>
+                    <div class="hadith-arabic">
+                            كَانَ النَّبِيُّ صلى الله عليه وسلم يُسَاقِي يَهُودَ خَيْبَرَ عَلَى الشَّطْرِ مِنْ ثِمَارِ النَّخْلِ وَالْعِنَبِ
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 30, Hadith 2031</div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">2</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: Condições da Musaqah</h3>
+                        <p class="chapter-arabic">باب شُرُوطِ الْمُسَاقَاةِ</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2033</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Ibn Abbas (رضي الله عنهما)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ disse: "A musaqah é válida quando as árvores são claramente identificadas, a parte do trabalhador é definida, e o período do contrato é estabelecido."
+                    </div>
+                    <div class="hadith-arabic">
+                        قَالَ النَّبِيُّ صلى الله عليه وسلم: "الْمُسَاقَاةُ جَائِزَةٌ إِذَا عُرِفَتِ الشَّجَرَةُ وَحُدَّتْ حِصَّةُ الْعَامِلِ وَأُجِّلَتِ الْمُدَّةُ"
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 30, Hadith 2033</div>
+                </div>
+            </div>
+
+            <div class="chapter">
+                <div class="chapter-header">
+                    <div class="chapter-icon">3</div>
+                    <div class="chapter-info">
+                        <h3>Capítulo: A Proibição de Vender Frutas Antes da Maturidade</h3>
+                        <p class="chapter-arabic">باب بَيْعِ الثِّمَارِ قَبْلَ أَنْ يَبْدُوَ صَلاَحُهَا</p>
+                    </div>
+                </div>
+
+                <div class="hadith">
+                    <div class="hadith-header">
+                        <span class="hadith-number">Hadith 2035</span>
+                        <span class="hadith-grade">Sahih</span>
+                    </div>
+                    <div class="hadith-narrator">Narrado por Anas ibn Malik (رضي الله عنه)</div>
+                    <div class="hadith-text">
+                        O Profeta ﷺ proibiu vender frutas das tamareiras e videiras até que começassem a amadurecer, pois poderia haver calamidades antes da colheita.
+                    </div>
+                    <div class="hadith-arabic">
+                        نَهَى النَّبِيُّ صلى الله عليه وسلم عَنْ بَيْعِ ثِمَارِ النَّخْلِ وَالْعِنَبِ حَتَّى يَبْدُوَ صَلاَحُهَا
+                    </div>
+                    <div class="hadith-reference">Referência: Sahih al-Bukhari, Livro 30, Hadith 2035</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>📚 Biblioteca Islam Moçambique - Sahih al-Bukhari Volume 2 (Livros 25-30)</p>
+        <p>Compilado por Imam Muhammad ibn Ismail al-Bukhari | Tradução para Português</p>
+        <p style="margin-top: 10px; font-size: 0.85rem; opacity: 0.7;">
+            Este site é um projeto educacional para a comunidade muçulmana de Moçambique.<br>
+            Para mais recursos islâmicos, visite sua mesquita local ou centro islâmico.
+        </p>
+    </footer>
+
+    <script>
+        function showBook(bookNum) {
+            // Hide all book sections
+            document.querySelectorAll('.book-section').forEach(section => {
+                section.classList.remove('active');
+                section.style.display = 'none';
+            });
+
+            // Show selected book
+            const selectedBook = document.getElementById('book-' + bookNum);
+            if (selectedBook) {
+                selectedBook.style.display = 'block';
+                setTimeout(() => selectedBook.classList.add('active'), 10);
+            }
+
+            // Update nav buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show first book by default
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('book-25').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

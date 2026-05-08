@@ -1,7 +1,4 @@
-
-import json
-
-book44 = {
+{
     "44": {
         "title": "Livro da Bebida",
         "arabic": "كتاب الأشربة",

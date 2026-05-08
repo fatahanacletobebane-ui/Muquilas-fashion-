@@ -1,0 +1,285 @@
+
+import json
+
+book44 = {
+    "44": {
+        "title": "Livro da Bebida",
+        "arabic": "كتاب الأشربة",
+        "hadiths": [
+            {
+                "chapter": "A proibição de todas as bebidas intoxicantes",
+                "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ حَدَّثَنَا هِشَامُ بْنُ يُوسُفَ أَخْبَرَنَا مَعْمَرٌ عَنِ الزُّهْرِيِّ عَنْ سَالِمِ بْنِ عَبْدِ اللَّهِ عَنْ ابْنِ عُمَرَ رَضِيَ اللَّهُ عَنْهُمَا أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ مَنْ شَرِبَ الْخَمْرَ فِي الدُّنْيَا فَلَمْ يَتُبْ مِنْهَا حَرَّمَ اللَّهُ عَلَيْهِ الْخَمْرَ فِي الْآخِرَةِ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) disse: 'Quem beber vinho neste mundo e não se arrepender, Allah lhe proibirá o vinho no Além.'",
+                "narrator": "Ibn Umar",
+                "reference": "Sahih al-Bukhari 5575"
+            },
+            {
+                "chapter": "O leite foi escolhido em vez do vinho",
+                "arabic": "حَدَّثَنَا مُسَدَّدٌ حَدَّثَنَا يَحْيَى عَنْ شُعْبَةَ عَنْ قَتَادَةَ عَنْ أَبِي الْمُتَوَكِّلِ عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ عُرِضَ عَلَيَّ اللَّيْلَةَ كَأْسَانِ أَحْدَاهُمَا لَبَنٌ وَالْآخَرُ خَمْرٌ فَنَظَرْتُ إِلَيْهِمَا فَأَخَذْتُ الَّذِي هُوَ لَبَنٌ فَقَالَ لِي جِبْرِيلُ عَلَيْهِ السَّلَامُ الْحَمْدُ لِلَّهِ الَّذِي هَدَاكَ لِلْفِطْرَةِ لَوْ أَخَذْتَ الْخَمْرَ غَوَتْ أُمَّتُكَ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) disse: 'Foi-me apresentado esta noite dois copos, um de leite e outro de vinho. Olhei para eles e peguei o que era leite. Então Jibril (a.s.) disse-me: Louvor a Allah que te guiou à Fitra (natureza correta). Se tivesses pegado o vinho, tua comunidade se teria desviado.'",
+                "narrator": "Abu Sa'id al-Khudri",
+                "reference": "Sahih al-Bukhari 5576"
+            },
+            {
+                "chapter": "Sinais da Hora: bebidas alcoólicas",
+                "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ بَشَّارٍ حَدَّثَنَا غُنْدَرٌ حَدَّثَنَا شُعْبَةُ عَنْ قَتَادَةَ عَنْ أَنَسِ بْنِ مَالِكٍ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ لَيْسَ مِنْ أُمَّتِي مَنْ لَمْ يُؤْمِنْ بِالْقَدَرِ خَيْرِهِ وَشَرِّهِ وَلَيْسَ مِنْ أُمَّتِي مَنْ شَرِبَ الْخَمْرَ وَلَيْسَ مِنْ أُمَّتِي مَنْ زَنَى وَلَيْسَ مِنْ أُمَّتِي مَنْ سَرَقَ وَلَيْسَ مِنْ أُمَّتِي مَنْ أَخَذَ مَالَ النَّاسِ بِغَيْرِ حَقٍّ بِالسَّيْفِ يُظِلُّونَهُمْ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) disse: 'Não é da minha comunidade quem não crê na Qadar (predestinação), seu bem e seu mal. Não é da minha comunidade quem bebe vinho. Não é da minha comunidade quem comete adultério. Não é da minha comunidade quem rouba. Não é da minha comunidade quem toma a riqueza das pessoas injustamente com a espada, fazendo-os temer.'",
+                "narrator": "Anas ibn Malik",
+                "reference": "Sahih al-Bukhari 5577"
+            },
+            {
+                "chapter": "O adultério, o roubo e o vinho",
+                "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ حَدَّثَنَا هِشَامُ بْنُ يُوسُفَ أَخْبَرَنَا مَعْمَرٌ عَنِ الزُّهْرِيِّ عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ لَا يَزْنِي الزَّانِي حِينَ يَزْنِي وَهُوَ مُؤْمِنٌ وَلَا يَشْرَبُ الْخَمْرَ حِينَ يَشْرَبُهَا وَهُوَ مُؤْمِنٌ وَلَا يَسْرِقُ حِينَ يَسْرِقُ وَهُوَ مُؤْمِنٌ وَلَا يَنْهَبُ نَهْبًا يُرِيهِ النَّاسُ وَهُوَ مُؤْمِنٌ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) disse: 'O adúltero, no momento em que comete adultério, não é crente. Quem bebe vinho, no momento em que a bebe, não é crente. O ladrão, no momento em que rouba, não é crente. Quem saqueia um saque que as pessoas veem, não é crente no momento em que o saqueia.'",
+                "narrator": "Abu Huraira",
+                "reference": "Sahih al-Bukhari 5578"
+            },
+            {
+                "chapter": "A proibição do vinho em Medina",
+                "arabic": "حَدَّثَنَا مُسَدَّدٌ حَدَّثَنَا يَحْيَى عَنْ شُعْبَةَ عَنْ قَتَادَةَ عَنْ أَنَسِ بْنِ مَالِكٍ رَضِيَ اللَّهُ عَنْهُ أَنَّهُ قَالَ نَهَى رَسُولُ اللَّهِ ﷺ عَنِ الْخَمْرِ وَلَمْ يَكُنْ فِي الْمَدِينَةِ إِذْ ذَاكَ إِلَّا قَلِيلٌ مِنَ الْعَنَبِ وَكَانَ أَكْثَرُ شَرَابِنَا مِنَ التَّمْرِ",
+                "portuguese": "Anas ibn Malik disse: 'O Mensageiro de Allah (ﷺ) proibiu o vinho, e naquela época em Medina não havia senão poucas uvas, e a maior parte de nossas bebidas era de tâmaras.'",
+                "narrator": "Anas ibn Malik",
+                "reference": "Sahih al-Bukhari 5579"
+            },
+            {
+                "chapter": "O vinho é feito de cinco coisas",
+                "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ حَدَّثَنَا هِشَامُ بْنُ يُوسُفَ أَخْبَرَنَا مَعْمَرٌ عَنِ الزُّهْرِيِّ عَنْ سَالِمِ بْنِ عَبْدِ اللَّهِ عَنْ ابْنِ عُمَرَ رَضِيَ اللَّهُ عَنْهُمَا أَنَّ عُمَرَ قَالَ خَطَبَنَا عَلَى مِنْبَرِ رَسُولِ اللَّهِ ﷺ فَقَالَ أَيُّهَا النَّاسُ إِنَّهُ قَدْ نَزَلَ تَحْرِيمُ الْخَمْرِ وَهِيَ مِنْ خَمْسَةٍ مِنَ الْعِنَبِ وَالتَّمْرِ وَالْعَسَلِ وَالشَّعِيرِ وَالْحِنْطَةِ وَالْخَمْرُ مَا خَامَرَ الْعَقْلَ",
+                "portuguese": "Umar disse: 'Falou-nos no púlpito do Mensageiro de Allah (ﷺ) e disse: Ó povo! Foi revelada a proibição do vinho, e ele é feito de cinco coisas: uvas, tâmaras, mel, cevada e trigo. E o vinho é o que obscurece a mente.'",
+                "narrator": "Ibn Umar",
+                "reference": "Sahih al-Bukhari 5580"
+            },
+            {
+                "chapter": "Derramando o vinho quando foi proibido",
+                "arabic": "حَدَّثَنَا مُسَدَّدٌ حَدَّثَنَا يَحْيَى عَنْ شُعْبَةَ عَنْ قَتَادَةَ عَنْ أَنَسِ بْنِ مَالِكٍ رَضِيَ اللَّهُ عَنْهُ أَنَّهُ قَالَ كُنْتُ أَسْقِي أَبَا طَلْحَةَ وَأَبَا دُجَانَةَ وَسُهَيْلَ بْنَ الْبَيْضَاءِ فَجَاءَهُمْ رَجُلٌ فَقَالَ إِنَّ الْخَمْرَ قَدْ حُرِّمَتْ فَقَالَ أَنَسٌ انْهَبُوهَا فَنَهَبْنَاهَا وَكُنْتُ أَصْغَرَهُمْ وَكُنَّا نَعْتَدُّهَا خَمْرًا",
+                "portuguese": "Anas disse: 'Eu servia Abu Talha, Abu Dujana e Suhayl ibn al-Bayda'. Veio a eles um homem e disse: O vinho foi proibido. Anas disse: Derramai-o! E o derramamos. Eu era o mais novo deles, e nós o considerávamos vinho.'",
+                "narrator": "Anas ibn Malik",
+                "reference": "Sahih al-Bukhari 5581"
+            },
+            {
+                "chapter": "Toda bebida que embriaga é proibida",
+                "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ حَدَّثَنَا هِشَامُ بْنُ يُوسُفَ أَخْبَرَنَا مَعْمَرٌ عَنِ الزُّهْرِيِّ عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا أَنَّ رَسُولَ اللَّهِ ﷺ سُئِلَ عَنِ الْبِتْعِ فَقَالَ كُلُّ شَرَابٍ أَسْكَرَ فَهُوَ حَرَامٌ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) foi perguntado sobre o bit' (bebida de mel). Ele disse: 'Toda bebida que embriaga é proibida.'",
+                "narrator": "Aisha",
+                "reference": "Sahih al-Bukhari 5582"
+            },
+            {
+                "chapter": "Toda bebida que embriaga é proibida",
+                "arabic": "حَدَّثَنَا مُسَدَّدٌ حَدَّثَنَا يَحْيَى عَنْ شُعْبَةَ عَنْ قَتَادَةَ عَنْ أَبِي الْمُتَوَكِّلِ عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ إِنَّ اللَّهَ حَرَّمَ عَلَى أُمَّتِي الْخَمْرَ وَمَا أَسْكَرَ مِنْهَا",
+                "portuguese": "O Mensageiro de Allah (ﷺ) disse: 'Allah proibiu para a minha comunidade o vinho e tudo o que dela embriaga.'",
+                "narrator": "Abu Sa'id al-Khudri",
+                "reference": "Sahih al-Bukhari 5583"
+            },
+            {
+                "chapter": "A maldição sobre o vinho e quem o bebe",
+                "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ حَدَّثَنَا هِشَامُ بْنُ يُوسُفَ أَخْبَرَنَا مَعْمَرٌ عَنِ الزُّهْرِيِّ عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ لَعَنَ اللَّهُ الْخَمْرَ وَشَارِبَهَا وَسَاقِيَهَا وَبَائِعَهَا وَمُبْتَاعَهَا وَعَاصِرَهَا وَمُعْتَصِرَهَا وَحَامِلَهَا وَالْمَحْمُولَةَ إِلَيْهِ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) disse: 'Allah amaldiçoou o vinho, quem o bebe, quem o serve, quem o vende, quem o compra, quem o espreme, quem o manda espremir, quem o carrega e quem para quem é carregado.'",
+                "narrator": "Abu Huraira",
+                "reference": "Sahih al-Bukhari 5584"
+            },
+            {
+                "chapter": "A maldição sobre o vinho e quem o bebe",
+                "arabic": "حَدَّثَنَا مُسَدَّدٌ حَدَّثَنَا يَحْيَى عَنْ شُعْبَةَ عَنْ قَتَادَةَ عَنْ أَبِي الْمُتَوَكِّلِ عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ لَعَنَ اللَّهُ الْخَمْرَ وَشَارِبَهَا وَسَاقِيَهَا وَبَائِعَهَا وَمُبْتَاعَهَا وَعَاصِرَهَا وَمُعْتَصِرَهَا وَحَامِلَهَا وَالْمَحْمُولَةَ إِلَيْهِ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) disse: 'Allah amaldiçoou o vinho, quem o bebe, quem o serve, quem o vende, quem o compra, quem o espreme, quem o manda espremir, quem o carrega e quem para quem é carregado.'",
+                "narrator": "Abu Sa'id al-Khudri",
+                "reference": "Sahih al-Bukhari 5585"
+            },
+            {
+                "chapter": "Quem bebe vinho e não se arrepende",
+                "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ حَدَّثَنَا هِشَامُ بْنُ يُوسُفَ أَخْبَرَنَا مَعْمَرٌ عَنِ الزُّهْرِيِّ عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ مَنْ شَرِبَ الْخَمْرَ فِي الدُّنْيَا فَلَمْ يَتُبْ مِنْهَا حَرَّمَ اللَّهُ عَلَيْهِ الْخَمْرَ فِي الْآخِرَةِ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) disse: 'Quem beber vinho neste mundo e não se arrepender, Allah lhe proibirá o vinho no Além.'",
+                "narrator": "Abu Huraira",
+                "reference": "Sahih al-Bukhari 5586"
+            },
+            {
+                "chapter": "Toda bebida que embriaga é proibida",
+                "arabic": "حَدَّثَنَا مُسَدَّدٌ حَدَّثَنَا يَحْيَى عَنْ شُعْبَةَ عَنْ قَتَادَةَ عَنْ أَبِي الْمُتَوَكِّلِ عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ ﷺ قَالَ إِنَّ اللَّهَ حَرَّمَ عَلَى أُمَّتِي الْخَمْرَ وَمَا أَسْكَرَ مِنْهَا",
+                "portuguese": "O Mensageiro de Allah (ﷺ) disse: 'Allah proibiu para a minha comunidade o vinho e tudo o que dela embriaga.'",
+                "narrator": "Abu Sa'id al-Khudri",
+                "reference": "Sahih al-Bukhari 5587"
+            },
+            {
+                "chapter": "A proibição de recipientes de couro para nabidh",
+                "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ حَدَّثَنَا هِشَامُ بْنُ يُوسُفَ أَخْبَرَنَا مَعْمَرٌ عَنِ الزُّهْرِيِّ عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ رَضِيَ اللَّهُ عَنْهُمَا أَنَّ رَسُولَ اللَّهِ ﷺ نَهَى عَنِ الضَّرْبِ فِي الْإِنَاءِ وَالدُّبَّاءِ وَالْمُزَفَّتِ وَالنَّقِيرِ وَأَنْ يُخْلَطَ الرُّطَبُ بِالتَّمْرِ وَالزَّبِيبُ بِالتَّمْرِ وَالزَّبِيبُ بِالرُّطَبِ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) proibiu bater nos recipientes, e o uso do ad-dubba' (vaso de abóbora), al-muzaffat (revestido de alcatrão), an-naqir (madeira escavada), e misturar tâmaras frescas com secas, e passas com tâmaras, e passas com tâmaras frescas.",
+                "narrator": "Jabir ibn Abdullah",
+                "reference": "Sahih al-Bukhari 5588"
+            },
+            {
+                "chapter": "A proibição de recipientes de couro para nabidh",
+                "arabic": "حَدَّثَنَا مُسَدَّدٌ حَدَّثَنَا يَحْيَى عَنْ شُعْبَةَ عَنْ قَتَادَةَ عَنْ أَبِي الْمُتَوَكِّلِ عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ ﷺ نَهَى عَنِ الضَّرْبِ فِي الْإِنَاءِ وَالدُّبَّاءِ وَالْمُزَفَّتِ وَالنَّقِيرِ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) proibiu bater nos recipientes, e o uso do ad-dubba', al-muzaffat e an-naqir.",
+                "narrator": "Abu Sa'id al-Khudri",
+                "reference": "Sahih al-Bukhari 5589"
+            },
+            {
+                "chapter": "A proibição de recipientes de couro para nabidh",
+                "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ حَدَّثَنَا هِشَامُ بْنُ يُوسُفَ أَخْبَرَنَا مَعْمَرٌ عَنِ الزُّهْرِيِّ عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا أَنَّ رَسُولَ اللَّهِ ﷺ نَهَى أَنْ يُنْبَذَ فِي الدُّبَّاءِ وَالْمُزَفَّتِ وَالنَّقِيرِ وَالْحَنْتَمِ وَالْجَعْرِ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) proibiu que se prepare nabidh no ad-dubba', al-muzaffat, an-naqir, al-hantam e al-ja'r.",
+                "narrator": "Aisha",
+                "reference": "Sahih al-Bukhari 5590"
+            },
+            {
+                "chapter": "A proibição de recipientes de couro para nabidh",
+                "arabic": "حَدَّثَنَا مُسَدَّدٌ حَدَّثَنَا يَحْيَى عَنْ شُعْبَةَ عَنْ قَتَادَةَ عَنْ أَبِي الْمُتَوَكِّلِ عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ ﷺ نَهَى عَنِ الضَّرْبِ فِي الْإِنَاءِ وَالدُّبَّاءِ وَالْمُزَفَّتِ وَالنَّقِيرِ وَأَنْ يُخْلَطَ الرُّطَبُ بِالتَّمْرِ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) proibiu bater nos recipientes, e o uso do ad-dubba', al-muzaffat e an-naqir, e misturar tâmaras frescas com secas.",
+                "narrator": "Abu Sa'id al-Khudri",
+                "reference": "Sahih al-Bukhari 5591"
+            },
+            {
+                "chapter": "A proibição de recipientes de couro para nabidh",
+                "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ حَدَّثَنَا هِشَامُ بْنُ يُوسُفَ أَخْبَرَنَا مَعْمَرٌ عَنِ الزُّهْرِيِّ عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ رَضِيَ اللَّهُ عَنْهُمَا أَنَّ رَسُولَ اللَّهِ ﷺ نَهَى عَنِ الضَّرْبِ فِي الْإِنَاءِ وَالدُّبَّاءِ وَالْمُزَفَّتِ وَالنَّقِيرِ وَأَنْ يُخْلَطَ الرُّطَبُ بِالتَّمْرِ وَالزَّبِيبُ بِالتَّمْرِ وَالزَّبِيبُ بِالرُّطَبِ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) proibiu bater nos recipientes, e o uso do ad-dubba', al-muzaffat e an-naqir, e misturar tâmaras frescas com secas, e passas com tâmaras, e passas com tâmaras frescas.",
+                "narrator": "Jabir ibn Abdullah",
+                "reference": "Sahih al-Bukhari 5592"
+            },
+            {
+                "chapter": "A proibição de recipientes de couro para nabidh",
+                "arabic": "حَدَّثَنَا مُسَدَّدٌ حَدَّثَنَا يَحْيَى عَنْ شُعْبَةَ عَنْ قَتَادَةَ عَنْ أَبِي الْمُتَوَكِّلِ عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ ﷺ نَهَى عَنِ الضَّرْبِ فِي الْإِنَاءِ وَالدُّبَّاءِ وَالْمُزَفَّتِ وَالنَّقِيرِ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) proibiu bater nos recipientes, e o uso do ad-dubba', al-muzaffat e an-naqir.",
+                "narrator": "Abu Sa'id al-Khudri",
+                "reference": "Sahih al-Bukhari 5593"
+            },
+            {
+                "chapter": "A proibição de recipientes de couro para nabidh",
+                "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ حَدَّثَنَا هِشَامُ بْنُ يُوسُفَ أَخْبَرَنَا مَعْمَرٌ عَنِ الزُّهْرِيِّ عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا أَنَّ رَسُولَ اللَّهِ ﷺ نَهَى أَنْ يُنْبَذَ فِي الدُّبَّاءِ وَالْمُزَفَّتِ وَالنَّقِيرِ وَالْحَنْتَمِ وَالْجَعْرِ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) proibiu que se prepare nabidh no ad-dubba', al-muzaffat, an-naqir, al-hantam e al-ja'r.",
+                "narrator": "Aisha",
+                "reference": "Sahih al-Bukhari 5594"
+            },
+                        {
+                "chapter": "A proibição de recipientes de couro para nabidh",
+                "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ حَدَّثَنَا هِشَامُ بْنُ يُوسُفَ أَخْبَرَنَا مَعْمَرٌ عَنِ الزُّهْرِيِّ عَنْ أَبِي سَلَمَةَ بْنِ عَبْدِ الرَّحْمَنِ عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا أَنَّ رَسُولَ اللَّهِ ﷺ نَهَى أَنْ يُنْبَذَ فِي الدُّبَّاءِ وَالْمُزَفَّتِ وَالنَّقِيرِ وَالْحَنْتَمِ وَالْجَعْرِ",
+                "portuguese": "O Mensageiro de Allah (ﷺ) proibiu que se prepare nabidh no ad-dubba', al-muzaffat, an-naqir, al-hantam e al-ja'r.",
+                "narrator": "Aisha",
+                "reference": "Sahih al-Bukhari 5594"
+            },
+            {
+                "chapter": "A permissão do Profeta (ﷺ) para os recipientes após a proibição",
+                "arabic": "حَدَّثَنِي عُثْمَانُ حَدَّثَنَا جَرِيرٌ عَنْ مَنْصُورٍ عَنْ إِبْرَاهِيمَ قُلْتُ لِلأَسْوَدِ هَلْ سَأَلْتَ عَائِشَةَ أُمَّ الْمُؤْمِنِينَ عَمَّا يُكْرَهُ أَنْ يُنْتَبَذَ فِيهِ فَقَالَ نَعَمْ قُلْتُ يَا أُمَّ الْمُؤْمِنِينَ عَمَّا نَهَى النَّبِيُّ صلى الله عليه وسلم أَنْ يُنْتَبَذَ فِيهِ قَالَتْ نَهَانَا فِي ذَلِكَ أَهْلَ الْبَيْتِ أَنْ نَنْتَبِذَ فِي الدُّبَّاءِ وَالْمُزَفَّتِ قُلْتُ أَمَا ذَكَرْتِ الْجَرَّ وَالْحَنْتَمَ قَالَ إِنَّمَا أُحَدِّثُكَ مَا سَمِعْتُ أَفَأُحَدِّثُ مَا لَمْ أَسْمَعْ",
+                "portuguese": "Ibrahim disse: Perguntei a Al-Aswad: 'Você perguntou a Aisha, a Mãe dos Crentes, sobre os recipientes em que é desagradável preparar bebidas?' Ele disse: 'Sim, eu disse a ela: Ó Mãe dos Crentes! Quais recipientes o Profeta (ﷺ) proibiu para preparar bebidas?' Ela disse: 'O Profeta proibiu a nós, a família dele, que preparássemos bebidas no ad-dubba' e al-muzaffat.' Eu disse: 'Você não mencionou al-jarr e al-hantam?' Ela disse: 'Eu apenas lhe conto o que ouvi; devo contar-lhe o que não ouvi?'",
+                "narrator": "Ibrahim",
+                "reference": "Sahih al-Bukhari 5595"
+            },
+            {
+                "chapter": "A permissão do Profeta (ﷺ) para os recipientes após a proibição",
+                "arabic": "حَدَّثَنَا مُوسَى بْنُ إِسْمَاعِيلَ حَدَّثَنَا عَبْدُ الْوَاحِدِ حَدَّثَنَا الشَّيْبَانِيُّ قَالَ سَمِعْتُ عَبْدَ اللَّهِ بْنَ أَبِي أَوْفَى رضى الله عنهما قَالَ نَهَى النَّبِيُّ صلى الله عليه وسلم عَنِ الْجَرِّ الأَخْضَرِ قُلْتُ أَنَشْرَبُ فِي الأَبْيَضِ قَالَ لاَ",
+                "portuguese": "Ash-Shaibani disse: Ouvi Abdullah bin Abi Aufa dizer: 'O Profeta (ﷺ) proibiu o uso de jarros verdes.' Eu disse: 'Beberemos de jarros brancos?' Ele disse: 'Não.'",
+                "narrator": "Ash-Shaibani",
+                "reference": "Sahih al-Bukhari 5596"
+            },
+            {
+                "chapter": "O nabidh servido no casamento de Abu Usaid",
+                "arabic": "حَدَّثَنَا يَحْيَى بْنُ بُكَيْرٍ حَدَّثَنَا يَعْقُوبُ بْنُ عَبْدِ الرَّحْمَنِ الْقَارِيُّ عَنْ أَبِي حَازِمٍ قَالَ سَمِعْتُ سَهْلَ بْنَ سَعْدٍ أَنَّ أَبَا أُسَيْدٍ السَّاعِدِيَّ دَعَا النَّبِيَّ صلى الله عليه وسلم لِعُرْسِهِ فَكَانَتِ امْرَأَتُهُ خَادِمَهُمْ يَوْمَئِذٍ وَهْىَ الْعَرُوسُ فَقَالَتْ مَا تَدْرُونَ مَا أَنْقَعْتُ لِرَسُولِ اللَّهِ صلى الله عليه وسلم أَنْقَعْتُ لَهُ تَمَرَاتٍ مِنَ اللَّيْلِ فِي تَوْرٍ",
+                "portuguese": "Sahl bin Sa'd relatou que Abu Usaid al-Sa'idi convidou o Profeta (ﷺ) para o seu casamento, e sua esposa os serviu naquele dia, sendo ela a noiva. Ela disse: 'Sabeis o que eu preparei para o Mensageiro de Allah (ﷺ)? Deixei tâmaras de molho durante a noite numa tigela de pedra.'",
+                "narrator": "Sahl bin Sa'd",
+                "reference": "Sahih al-Bukhari 5597"
+            },
+            {
+                "chapter": "O Al-Badhaq e o que intoxica é proibido",
+                "arabic": "حَدَّثَنَا مُحَمَّدُ بْنُ كَثِيرٍ أَخْبَرَنَا سُفْيَانُ عَنْ أَبِي الْجُوَيْرِيَةِ قَالَ سَأَلْتُ ابْنَ عَبَّاسٍ عَنِ الْبَاذَقِ فَقَالَ سَبَقَ مُحَمَّدٌ صلى الله عليه وسلم الْبَاذَقَ فَمَا أَسْكَرَ فَهْوَ حَرَامٌ قَالَ الشَّرَابُ الْحَلاَلُ الطَّيِّبُ قَالَ لَيْسَ بَعْدَ الْحَلاَلِ الطَّيِّبِ إِلاَّ الْحَرَامُ الْخَبِيثُ",
+                "portuguese": "Ibn Abbas disse sobre o al-badhaq: 'Muhammad (ﷺ) veio antes do al-badhaq. O que intoxica é proibido.' Ele disse: 'A bebida lícita é a boa.' E disse: 'Depois do lícito e bom não há nada exceto o ilícito e ruim.'",
+                "narrator": "Ibn Abbas",
+                "reference": "Sahih al-Bukhari 5598"
+            },
+            {
+                "chapter": "O Profeta (ﷺ) gostava de doces e mel",
+                "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ أَبِي شَيْبَةَ حَدَّثَنَا أَبُو أُسَامَةَ حَدَّثَنَا هِشَامُ بْنُ عُرْوَةَ عَنْ أَبِيهِ عَنْ عَائِشَةَ رضى الله عنها قَالَتْ كَانَ النَّبِيُّ صلى الله عليه وسلم يُحِبُّ الْحَلْوَاءَ وَالْعَسَلَ",
+                "portuguese": "Aisha relatou: 'O Profeta (ﷺ) gostava de doces e mel.'",
+                "narrator": "Aisha",
+                "reference": "Sahih al-Bukhari 5599"
+            },
+            {
+                "chapter": "A proibição de misturar tâmaras secas e frescas",
+                "arabic": "حَدَّثَنَا مُسْلِمٌ حَدَّثَنَا هِشَامٌ حَدَّثَنَا قَتَادَةُ عَنْ أَنَسٍ رضى الله عنه قَالَ إِنِّي لأَسْقِي أَبَا طَلْحَةَ وَأَبَا دُجَانَةَ وَسُهَيْلَ ابْنَ الْبَيْضَاءِ خَلِيطَ بُسْرٍ وَتَمْرٍ إِذْ حُرِّمَتِ الْخَمْرُ فَقَذَفْتُهَا وَأَنَا سَاقِيهِمْ وَأَصْغَرُهُمْ وَإِنَّا نَعُدُّهَا يَوْمَئِذٍ الْخَمْرَ",
+                "portuguese": "Anas disse: 'Eu estava servindo a Abu Talha, Abu Dujana e Suhail bin Al-Baida' uma mistura de tâmaras verdes e maduras quando o vinho foi proibido. Então derramei-a enquanto os servia, sendo eu o mais jovem deles, e naquele tempo nós a considerávamos como vinho.'",
+                "narrator": "Anas",
+                "reference": "Sahih al-Bukhari 5600"
+            },
+            {
+                "chapter": "A proibição de misturar uvas e tâmaras",
+                "arabic": "حَدَّثَنَا أَبُو عَاصِمٍ عَنِ ابْنِ جُرَيْجٍ أَخْبَرَنِي عَطَاءٌ أَنَّهُ سَمِعَ جَابِرًا رضى الله عنه يَقُولُ نَهَى النَّبِيُّ صلى الله عليه وسلم عَنِ الزَّبِيبِ وَالتَّمْرِ وَالْبُسْرِ وَالرُّطَبِ",
+                "portuguese": "Jabir disse: 'O Profeta (ﷺ) proibiu a mistura de uvas passas e tâmaras, tâmaras verdes e tâmaras frescas.'",
+                "narrator": "Jabir",
+                "reference": "Sahih al-Bukhari 5601"
+            },
+            {
+                "chapter": "A proibição de misturar tâmaras e uvas",
+                "arabic": "حَدَّثَنَا مُسْلِمٌ حَدَّثَنَا هِشَامٌ أَخْبَرَنَا يَحْيَى بْنُ أَبِي كَثِيرٍ عَنْ عَبْدِ اللَّهِ بْنِ أَبِي قَتَادَةَ عَنْ أَبِيهِ قَالَ نَهَى النَّبِيُّ صلى الله عليه وسلم أَنْ يُجْمَعَ بَيْنَ التَّمْرِ وَالزَّهْوِ وَالتَّمْرِ وَالزَّبِيبِ وَلْيُنْبَذْ كُلُّ وَاحِدٍ مِنْهُمَا عَلَى حِدَةٍ",
+                "portuguese": "Abu Qatada disse: 'O Profeta (ﷺ) proibiu que se juntassem tâmaras e tâmaras quase maduras, e tâmaras e uvas passas. Cada um deles deve ser preparado separadamente.'",
+                "narrator": "Abu Qatada",
+                "reference": "Sahih al-Bukhari 5602"
+            },
+            {
+                "chapter": "O leite e o vinho na Noite da Jornada Celestial",
+                "arabic": "حَدَّثَنَا عَبْدَانُ أَخْبَرَنَا عَبْدُ اللَّهِ أَخْبَرَنَا يُونُسُ عَنِ الزُّهْرِيِّ عَنْ سَعِيدِ بْنِ الْمُسَيَّبِ عَنْ أَبِي هُرَيْرَةَ رضى الله عنه قَالَ أُتِيَ رَسُولُ اللَّهِ صلى الله عليه وسلم لَيْلَةَ أُسْرِيَ بِهِ بِقَدَحِ لَبَنٍ وَقَدَحِ خَمْرٍ",
+                "portuguese": "Abu Huraira disse: 'Na noite em que foi feita a Jornada Celestial, foram apresentados ao Mensageiro de Allah (ﷺ) um copo de leite e um copo de vinho.'",
+                "narrator": "Abu Huraira",
+                "reference": "Sahih al-Bukhari 5603"
+            },
+            {
+                "chapter": "O jejum do Profeta (ﷺ) no Dia de Arafah",
+                "arabic": "حَدَّثَنَا الْحُمَيْدِيُّ سَمِعَ سُفْيَانَ أَخْبَرَنَا سَالِمٌ أَبُو النَّضْرِ أَنَّهُ سَمِعَ عُمَيْرًا مَوْلَى أُمِّ الْفَضْلِ يُحَدِّثُ عَنْ أُمِّ الْفَضْلِ قَالَتْ شَكَّ النَّاسُ فِي صِيَامِ رَسُولِ اللَّهِ صلى الله عليه وسلم يَوْمَ عَرَفَةَ فَأَرْسَلْتُ إِلَيْهِ بِإِنَاءٍ فِيهِ لَبَنٌ فَشَرِبَ",
+                "portuguese": "Umm al-Fadl disse: 'As pessoas duvidavam se o Mensageiro de Allah (ﷺ) jejuava no Dia de Arafah. Então enviei-lhe um recipiente com leite e ele bebeu.'",
+                "narrator": "Umm al-Fadl",
+                "reference": "Sahih al-Bukhari 5604"
+            },
+            {
+                "chapter": "Cobrir o leite",
+                "arabic": "حَدَّثَنَا قُتَيْبَةُ حَدَّثَنَا جَرِيرٌ عَنِ الأَعْمَشِ عَنْ أَبِي صَالِحٍ وَأَبِي سُفْيَانَ عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ قَالَ جَاءَ أَبُو حُمَيْدٍ بِقَدَحٍ مِنْ لَبَنٍ مِنَ النَّقِيعِ فَقَالَ لَهُ رَسُولُ اللَّهِ صلى الله عليه وسلم أَلاَّ خَمَّرْتَهُ وَلَوْ أَنْ تَعْرُضَ عَلَيْهِ عُودًا",
+                "portuguese": "Jabir disse: 'Abu Humaid trouxe um copo de leite de An-Naqi' ao Mensageiro de Allah (ﷺ), que lhe disse: Não o cobriste, mesmo que com um pedaço de madeira?'",
+                "narrator": "Jabir",
+                "reference": "Sahih al-Bukhari 5605"
+            },
+            {
+                "chapter": "Cobrir o leite",
+                "arabic": "حَدَّثَنَا عُمَرُ بْنُ حَفْصٍ حَدَّثَنَا أَبِي حَدَّثَنَا الأَعْمَشُ قَالَ سَمِعْتُ أَبَا صَالِحٍ يَذْكُرُ أُرَاهُ عَنْ جَابِرٍ رضى الله عنه قَالَ جَاءَ أَبُو حُمَيْدٍ رَجُلٌ مِنَ الأَنْصَارِ مِنَ النَّقِيعِ بِإِنَاءٍ مِنْ لَبَنٍ إِلَى النَّبِيِّ صلى الله عليه وسلم فَقَالَ النَّبِيُّ صلى الله عليه وسلم أَلاَّ خَمَّرْتَهُ وَلَوْ أَنْ تَعْرُضَ عَلَيْهِ عُودًا",
+                "portuguese": "Jabir disse: 'Um homem de Al-Ansar, Abu Humaid, trouxe de An-Naqi' um recipiente de leite ao Profeta (ﷺ), que disse: Não o cobriste, mesmo que com um pedaço de madeira?'",
+                "narrator": "Jabir",
+                "reference": "Sahih al-Bukhari 5606"
+            },
+            {
+                "chapter": "A excelência do leite",
+                "arabic": "حَدَّثَنَا أَبُو الْيَمَانِ أَخْبَرَنَا شُعَيْبٌ حَدَّثَنَا أَبُو الزِّنَادِ عَنْ عَبْدِ الرَّحْمَنِ عَنْ أَبِي هُرَيْرَةَ رضى الله عنه أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ نِعْمَ الصَّدَقَةُ اللِّقْحَةُ الصَّفِيُّ مِنْحَةً وَالشَّاةُ الصَّفِيُّ مِنْحَةً تَغْدُو بِإِنَاءٍ وَتَرُوحُ بِآخَرَ",
+                "portuguese": "Abu Huraira disse: O Mensageiro de Allah (ﷺ) disse: 'Que excelente caridade é a vaca leiteira pura dada em presente, e a ovelha pura dada em presente, que sai pela manhã com um recipiente e volta à tarde com outro.'",
+                "narrator": "Abu Huraira",
+                "reference": "Sahih al-Bukhari 5607"
+            },
+            {
+                "chapter": "O Profeta (ﷺ) bebe leite e faz gargarejo",
+                "arabic": "حَدَّثَنَا أَبُو عَاصِمٍ عَنِ الأَوْزَاعِيِّ عَنِ ابْنِ شِهَابٍ عَنْ عُبَيْدِ اللَّهِ بْنِ عَبْدِ اللَّهِ عَنِ ابْنِ عَبَّاسٍ رضى الله عنهما أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم شَرِبَ لَبَنًا فَمَضْمَضَ وَقَالَ إِنَّ لَهُ دَسَمًا",
+                "portuguese": "Ibn Abbas relatou que o Mensageiro de Allah (ﷺ) bebeu leite, fez gargarejo e disse: 'Ele tem gordura.'",
+                "narrator": "Ibn Abbas",
+                "reference": "Sahih al-Bukhari 5608"
+            },
+            {
+                "chapter": "Os rios no Paraíso e a escolha do leite",
+                "arabic": "وَقَالَ إِبْرَاهِيمُ بْنُ طَهْمَانَ عَنْ شُعْبَةَ عَنْ قَتَادَةَ عَنْ أَنَسِ بْنِ مَالِكٍ قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم رُفِعْتُ إِلَى السِّدْرَةِ فَإِذَا أَرْبَعَةُ أَنْهَارٍ نَهَرَانِ ظَاهِرَانِ وَنَهَرَانِ بَاطِنَانِ فَأَمَّا الظَّاهِرَانِ النِّيلُ وَالْفُرَاتُ وَأَمَّا الْبَاطِنَانِ فَنَهَرَانِ فِي الْجَنَّةِ فَأُتِيتُ بِثَلاَثَةِ أَقْدَاحٍ قَدَحٌ فِيهِ لَبَنٌ وَقَدَحٌ فِيهِ عَسَلٌ وَقَدَحٌ فِيهِ خَمْرٌ فَأَخَذْتُ الَّذِي فِيهِ اللَّبَنُ فَشَرِبْتُ فَقِيلَ لِي أَصَبْتَ الْفِطْرَةَ أَنْتَ وَأُمَّتُكَ",
+                "portuguese": "Anas bin Malik disse: O Mensageiro de Allah (ﷺ) disse: 'Fui elevado até a Sidrat al-Muntaha e eis que havia quatro rios: dois externos e dois internos. Quanto aos externos, são o Nilo e o Eufrates. Quanto aos internos, são dois rios no Paraíso. Fui apresentado três copos: um com leite, um com mel e um com vinho. Peguei o que continha leite e bebi. Foi-me dito: Acertaste a fitra, tu e a tua Umma.'",
+                "narrator": "Anas",
+                "reference": "Sahih al-Bukhari 5609"
+            },
+            {
+                "chapter": "A doação do palmar de Abu Talha",
+                "arabic": "حَدَّثَنَا عَبْدَانُ أَخْبَرَنَا عَبْدُ اللَّهِ أَخْبَرَنَا يُونُسُ عَنِ الزُّهْرِيِّ قَالَ أَخْبَرَنِي أَنَسُ بْنُ مَالِكٍ رضى الله عنه أَنَّهُ رَأَى رَسُولَ اللَّهِ صلى الله عليه وسلم شَرِبَ لَبَنًا وَأَتَى دَارَهُ فَحَلَبْتُ شَاةً فَشُبْتُ لِرَسُولِ اللَّهِ صلى الله عليه وسلم مِنَ الْبِئْرِ فَتَنَاوَلَ الْقَدَحَ فَشَرِبَ وَعَنْ يَسَارِهِ أَبُو بَكْرٍ وَعَنْ يَمِينِهِ أَعْرَابِيٌّ فَأَعْطَى الأَعْرَابِيَّ فَضْلَهُ ثُمَّ قَالَ الأَيْمَنَ فَالأَيْمَنَ",
+                "portuguese": "Anas bin Malik relatou que viu o Mensageiro de Allah (ﷺ) beber leite. Ele foi à casa de Anas, que ordenhou uma cabra e misturou água do poço para o Mensageiro de Allah (ﷺ). O Profeta pegou o copo e bebeu. À sua esquerda estava Abu Bakr e à sua direita um beduíno. Deu o resto ao beduíno e disse: 'O da direita, depois o da direita.'",
+                "narrator": "Anas",
+                "reference": "Sahih al-Bukhari 5610"
+            },
+            {
+                "chapter": "Beber água que passou a noite em recipiente",
+                "arabic": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ حَدَّثَنَا أَبُو أُسَامَةَ قَالَ أَخْبَرَنِي هِشَامٌ عَنْ أَبِيهِ عَنْ عَائِشَةَ رضى الله عنها قَالَتْ كَانَ النَّبِيُّ صلى الله عليه وسلم يُعْجِبُهُ الْحَلْوَاءُ وَالْعَسَلُ",
+                "portuguese": "Aisha relatou: 'O Profeta (ﷺ) gostava de doces e mel.'",
+                "narrator": "Aisha",
+                "reference": "Sahih al-Bukhari 5611"
+            },
+            {
+                "chapter": "Beber água que passou a noite em recipiente",
+                "arabic": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ حَدَّثَنَا أَبُو عَامِرٍ حَدَّثَنَا فُلَيْحُ بْنُ سُلَيْمَانَ عَنْ سَعِيدِ بْنِ الْحَارِثِ عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ رضى الله عنهما أَنَّ النَّبِيَّ صلى الله عليه وسلم دَخَلَ عَلَى رَجُلٍ مِنَ الأَنْصَارِ وَمَعَهُ صَاحِبٌ لَهُ فَقَالَ لَهُ النَّبِيُّ صلى الله عليه وسلم إِنْ كَانَ عِنْدَكَ مَاءٌ بَاتَ هَذِهِ اللَّيْلَةَ فِي شَنَّةٍ وَإِلاَّ كَرَعْنَا",
+                "portuguese": "Jabir disse: 'O Profeta (ﷺ) entrou na casa de um homem de Al-Ansar acompanhado de um amigo. O Profeta (ﷺ) disse-lhe: Se tiveres água que passou esta noite num recipiente de couro, senão beberemos diretamente.'",
+                "narrator": "Jabir",
+                "reference": "Sahih al-Bukhari 5612"
+            }
+        ]
+    }
+]
+            

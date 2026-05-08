@@ -1,7 +1,3 @@
-
-import json
-
-# Criar o JSON completo do Livro 43 - Kitab al-At'imah
 livro_43 = {
     "43": {
         "title": "Livro da Alimentação",

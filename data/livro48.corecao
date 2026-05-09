@@ -1,0 +1,270 @@
+
+        "numero": 1,
+        "numero_bukhari": 5625,
+        "numero_livro": 1,
+        "capitulo": "البر والصلة (A piedade e as boas relações)",
+        "narrador": "Al-Walid bin 'Aizar",
+        "texto_arabe": "حدثنا أبو الوليد: حدثنا شعبة قال: الوليد بن عيزار أخبرني قال: سمعت أبا عمرو الشيباني يقول: أخبرنا صاحب هذه الدار، وأومأ بيده إلى دار عبد الله، قال: سألت النبي ﷺ: أي العمل أحب إلى الله؟ قال: (الصلاة على وقتها). قال: ثم أي؟ قال: (ثم بر الوالدين). قال: ثم أي؟ قال: (الجهاد في سبيل الله). قال: حدثني بهن، ولو استزدته لزادني.",
+        "traducao_portugues": "Narrado por Al-Walid bin 'Aizar: Ouvi Abu 'Amr Ash-Shaibani dizer: 'O dono desta casa' - apontando para a casa de Abdullah - 'disse: Perguntei ao Profeta: Qual ação é mais amada por Allah? Ele respondeu: A oração em seu tempo determinado. Perguntei: Depois qual? Ele disse: A bondade para com os pais. Perguntei: Depois qual? Ele disse: O Jihad no caminho de Allah. Ele me contou isso, e se eu tivesse pedido mais, ele teria me dado mais.'"
+    },
+    {
+        "numero": 2,
+        "numero_bukhari": 5626,
+        "numero_livro": 2,
+        "capitulo": "من أحق الناس بحسن الصحبة (Quem tem mais direito à melhor companhia)",
+        "narrador": "Abu Huraira",
+        "texto_arabe": "حدثنا قتيبة بن سعيد: حدثنا جرير، عن عمارة بن القعقاع بن شبرمة، عن أبي زرعة، عن أبي هريرة رضي الله عنه قال: جاء رجل إلى رسول الله ﷺ فقال: يا رسول الله، من أحق الناس بحسن صحابتي؟ قال: (أمك). قال: ثم من؟ قال: (ثم أمك). قال: ثم من؟ قال: (ثم أمك). قال: ثم من؟ قال: (ثم أبوك).",
+        "traducao_portugues": "Narrado por Abu Huraira: Um homem veio ao Mensageiro de Allah e perguntou: 'Ó Mensageiro de Allah, quem tem mais direito à minha melhor companhia?' O Profeta disse: 'Tua mãe.' O homem perguntou: 'Depois quem?' Ele disse: 'Tua mãe.' O homem perguntou novamente: 'Depois quem?' Ele disse: 'Tua mãe.' O homem perguntou pela quarta vez: 'Depois quem?' Ele disse: 'Teu pai.'"
+    },
+    {
+        "numero": 3,
+        "numero_bukhari": 5627,
+        "numero_livro": 3,
+        "capitulo": "لا يجاهد إلا بإذن الأبوين (Não se deve fazer Jihad sem permissão dos pais)",
+        "narrador": "Abdullah bin 'Amr",
+        "texto_arabe": "حدثنا مسدد: حدثنا يحيى، عن سفيان وشعبة قالا: حدثنا حبيب (ح). قال: وحدثنا محمد بن كثير: أخبرنا سفيان، عن حبيب، عن أبي العباس، عن عبد الله بن عمرو قال: قال رجل للنبي ﷺ: أجاهد؟ قال: (لك أبوان). قال: نعم، قال: (ففيهما فجاهد).",
+        "traducao_portugues": "Narrado por Abdullah bin 'Amr: Um homem disse ao Profeta: 'Devo fazer Jihad?' O Profeta perguntou: 'Tens pais vivos?' O homem respondeu: 'Sim.' O Profeta disse: 'Então faz Jihad servindo-os.'"
+    },
+    {
+        "numero": 4,
+        "numero_bukhari": 5628,
+        "numero_livro": 4,
+        "capitulo": "لا يسب الرجل والديه (Não se deve amaldiçoar os pais)",
+        "narrador": "Abdullah bin 'Amr",
+        "texto_arabe": "حدثنا أحمد بن يونس: حدثنا إبراهيم بن سعد، عن أبيه، عن حميد بن عبد الرحمن، عن عبد الله بن عمرو رضي الله عنهما قال: قال رسول الله ﷺ: (إن من أكبر الكبائر أن يلعن الرجل والديه). قيل: يا رسول الله، وكيف يلعن الرجل والديه؟ قال: (يسب الرجل أبا الرجل، فيسب أباه، ويسب أمه فيسب أمه).",
+        "traducao_portugues": "Narrado por Abdullah bin 'Amr: O Mensageiro de Allah disse: 'Certamente, entre os maiores pecados está o homem amaldiçoar seus pais.' Foi perguntado: 'Ó Mensageiro de Allah, como um homem amaldiçoa seus pais?' Ele disse: 'O homem insulta o pai de outro homem, e este por sua vez insulta o pai dele, e insulta a mãe de outro, e este por sua vez insulta a mãe dele.'"
+    },
+    {
+        "numero": 5,
+        "numero_bukhari": 5629,
+        "numero_livro": 5,
+        "capitulo": "إجابة دعاء من بر والديه (A resposta à oração daquele que é bondoso com os pais)",
+        "narrador": "Ibn 'Umar",
+        "texto_arabe": "حدثنا سعيد بن أبي مريم: حدثنا إسماعيل بن إبراهيم بن عقبة قال: أخبرني نافع، عن ابن عمر رضي الله عنهما، عن رسول الله ﷺ قال: بينما ثلاثة نفر يتماشون أخذهم المطر، فمالوا إلى غار في الجبل، فانحطت على فم غارهم صخرة من الجبل فأطبقت عليهم، فقال بعضهم لبعض: انظروا أعمالاً عملتموها لله صالحة، فادعوا الله بها لعله يفرجها...",
+        "traducao_portugues": "Narrado por Ibn 'Umar: O Mensageiro de Allah disse: 'Enquanto três pessoas viajavam, foram surpreendidas pela chuva e se abrigaram em uma caverna na montanha. Uma grande rola caiu sobre a entrada da caverna e os bloqueou. Eles disseram uns aos outros: Procurem boas ações que fizestes para Allah e invoque-O por elas, talvez Ele nos liberte...'"
+    },
+    {
+        "numero": 6,
+        "numero_bukhari": 5630,
+        "numero_livro": 6,
+        "capitulo": "عقوق الوالدين من الكبائر (A desobediência aos pais é dos maiores pecados)",
+        "narrador": "Al-Mughira",
+        "texto_arabe": "حدثنا سعد بن حفص: حدثنا شيبان، عن منصور، عن المسيّب، عن ورّاد، عن المغيرة، عن النبي ﷺ قال: (إن الله حرم عليكم عقوق الأمهات، ومنعاً وهات، ووأد البنات، وكره لكم: قيل وقال، وكثرة السؤال، وإضاعة المال).",
+        "traducao_portugues": "Narrado por Al-Mughira: O Profeta disse: 'Allah proibiu-vos a desobediência às mães, o enterro vivo das filhas, a recusa em dar o que deveis e a exigência do que não mereceis. E Allah desgosta para vós: fofocas, excesso de perguntas e desperdício de bens.'"
+    },
+    {
+        "numero": 7,
+        "numero_bukhari": 5631,
+        "numero_livro": 7,
+        "capitulo": "عقوق الوالدين من الكبائر (A desobediência aos pais é dos maiores pecados)",
+        "narrador": "Abu Bakra",
+        "texto_arabe": "حدثني إسحق: حدثنا خالد الواسطي، عن الجريري، عن عبد الرحمن بن أبي بكرة، عن أبيه رضي الله عنه قال: قال رسول الله ﷺ: (ألا أنبئكم بأكبر الكبائر). قلنا: بلى يا رسول الله، قال: (الإشراك بالله، وعقوق الوالدين - وكان متكئاً فجلس فقال - ألا وقول الزور، وشهادة الزور).",
+        "traducao_portugues": "Narrado por Abu Bakra: O Mensageiro de Allah disse três vezes: 'Não vos informo sobre os maiores dos grandes pecados?' Dissemos: 'Sim, ó Mensageiro de Allah.' Ele disse: 'Associar parceiros a Allah e ser desobediente aos pais.' O Profeta estava reclinado e sentou-se, depois disse: 'E também falso testemunho.'"
+    },
+    {
+        "numero": 8,
+        "numero_bukhari": 5632,
+        "numero_livro": 8,
+        "capitulo": "عقوق الوالدين من الكبائر (A desobediência aos pais é dos maiores pecados)",
+        "narrador": "Anas bin Malik",
+        "texto_arabe": "حدثني محمد بن الوليد: حدثنا محمد بن جعفر: حدثنا شعبة قال: حدثني عبيد الله بن أبي بكر قال: سمعت أنس بن مالك رضي الله عنه قال: ذكر رسول الله ﷺ الكبائر، أو سئل عن الكبائر، فقال: (الشرك بالله، وقتل النفس، وعقوق الوالدين).",
+        "traducao_portugues": "Narrado por Anas bin Malik: O Mensageiro de Allah mencionou os grandes pecados, ou foi perguntado sobre eles, e disse: 'Associar parceiros a Allah, matar uma alma que Allah proibiu matar, e ser desobediente aos pais.'"
+    },
+    {
+        "numero": 9,
+        "numero_bukhari": 5633,
+        "numero_livro": 9,
+        "capitulo": "صلة الوالد المشرك (A boa relação com o pai idólatra)",
+        "narrador": "Asma' bint Abu Bakr",
+        "texto_arabe": "حدثنا الحميدي: حدثنا سفيان: حدثنا هشام بن عروة: أخبرني أبي: أخبرتني أسماء بنت أبي بكر رضي الله عنهما قالت: أتتني أمي راغبة، في عهد النبي ﷺ، فسألت النبي ﷺ: آصلها؟ قال: (نعم). قال ابن عيينة: فأنزل الله تعالى فيها: {لا ينهاكم الله عن الذين لم يقاتلوكم في الدين}.",
+        "traducao_portugues": "Narrado por Asma' bint Abu Bakra: Minha mãe veio a mim esperando minha bondade durante a vida do Profeta. Perguntei ao Profeta: 'Posso tratá-la com bondade?' Ele respondeu: 'Sim.' Então Allah revelou: 'Allah não vos proíbe de serdes bondosos com aqueles que não lutaram contra vós por causa da religião...'"
+    },
+    {
+        "numero": 10,
+        "numero_bukhari": 5634,
+        "numero_livro": 10,
+        "capitulo": "صلة المرأة أمها ولها زوج (A boa relação da mulher com sua mãe quando tem marido)",
+        "narrador": "Asma'",
+        "texto_arabe": "وقال الليث: حدثني هشام، عن عروة، عن أسماء قالت: قدمت أمي وهي مشركة، في عهد قريش ومدتهم إذ عاهدوا النبي ﷺ، مع أبيها، فاستفتيت النبي ﷺ فقلت: إن أمي قدمت وهي راغبة؟ قال: (نعم، صلي أمك).",
+        "traducao_portugues": "Narrado por Asma': Minha mãe, que era idólatra, veio durante o período de paz entre os muçulmanos e os coraixitas. Fui consultar o Profeta e disse: 'Minha mãe chegou e está esperando minha bondade.' O Profeta disse: 'Sim, seja bondosa com tua mãe.'"
+    },
+    {
+        "numero": 11,
+        "numero_bukhari": 5635,
+        "numero_livro": 11,
+        "capitulo": "صلة الأخ المشرك (A boa relação com o irmão idólatra)",
+        "narrador": "Abu Sufyan",
+        "texto_arabe": "حدثنا يحيى: حدثنا الليث قال: حدثني عقيل، عن ابن شهاب: أخبرني عبيد الله بن عبد الله: أن عبد الله بن عباس أخبره: أن أبا سفيان أخبره: أن هرقل أرسل إليه، فقال: فما يأمركم؟ - يعني النبي ﷺ - فقال: يأمرنا بالصلاة، والصدقة، والعفاف، والصلة.",
+        "traducao_portugues": "Narrado por Abu Sufyan: Heráclio enviou por ele e perguntou: 'O que ele vos ordena?' - referindo-se ao Profeta. Ele respondeu: 'Ele nos ordena a oração, a caridade, a castidade e a manutenção dos laços de parentesco.'"
+    },
+    {
+        "numero": 12,
+        "numero_bukhari": 5636,
+        "numero_livro": 12,
+        "capitulo": "صلة الأخ المشرك (A boa relação com o irmão idólatra)",
+        "narrador": "Ibn 'Umar",
+        "texto_arabe": "حدثنا موسى بن إسماعيل: حدثنا عبد العزيز بن مسلم: حدثنا عبد الله بن دينار قال: سمعت ابن عمر رضي الله عنهما يقول: رأى عمر حلة سيراء تباع، فقال: يا رسول الله، ابتع هذه والبسها يوم الجمعة، وإذا جاءك الوفود. قال: (إنما يلبس هذه من لا خلاق له). فأتي النبي ﷺ منها بحلل، فأرسل إلى عمر بحلة، فقال: كيف ألبسها وقد قلت فيها ما قلت؟ قال: (إني لم أعطكها لتلبسها، ولكن تبيعها أو تكسوها). فأرسل بها عمر إلى أخ له من أهل مكة قبل أن يسلم.",
+        "traducao_portugues": "Narrado por Ibn 'Umar: Meu pai (Umar) viu uma capa de seda sendo vendida e disse: 'Ó Mensageiro de Allah, compre esta e use-a nas sextas-feiras e quando os delegados estrangeiros vierem visitá-lo.' Ele disse: 'Isso é usado apenas por aquele que não terá parte alguma (no Paraíso).' Depois, o Profeta recebeu algumas capas e enviou uma a Umar. Umar disse: 'Como vou usá-la depois do que disseste?' O Profeta disse: 'Não te dei para usares, mas para vendê-la ou vestir outro com ela.' Então Umar a enviou a um irmão seu de Meca antes que ele se convertesse ao Islam."
+    },
+    {
+        "numero": 13,
+        "numero_bukhari": 5637,
+        "numero_livro": 13,
+        "capitulo": "فضل صلة الرحم (A superioridade de manter bons laços com parentes)",
+        "narrador": "Abu Ayyub Al-Ansari",
+        "texto_arabe": "حدثنا أبو الوليد: حدثنا شعبة قال: أخبرني ابن عثمان قال: سمعت موسى بن طلحة، عن أبي أيوب قال: قيل: يا رسول الله، أخبرني بعمل يدخلني الجنة. حدثني عبد الرحمن: حدثنا بهز: حدثنا شعبة: حدثنا ابن عثمان بن عبد الله بن موهب وأبوه عثمان بن عبد الله: أنهما سمعا موسى بن طلحة، عن أبي أيوب الأنصاري رضي الله عنه: أن رجلا قال: يا رسول الله، أخبرني بعمل يدخلني الجنة، فقال القوم: ما له ما له؟ فقال رسول الله ﷺ: (أرب ما له). فقال النبي ﷺ: (تعبد الله لا تشرك به شيئا، وتقيم الصلاة، وتؤتي الزكاة، وتصل الرحم، ذرها). قال: كأنه كان على راحلته.",
+        "traducao_portugues": "Narrado por Abu Ayyub Al-Ansari: Um homem disse: 'Ó Mensageiro de Allah, informe-me de uma ação que me fará entrar no Paraíso.' O Profeta disse: 'Adora a Allah sem associar parceiros a Ele, estabelece a oração, paga a Zakat e mantém os laços de parentesco. Deixa isso.' Parecia que o Profeta estava montado em sua montaria."
+    },
+    {
+        "numero": 14,
+        "numero_bukhari": 5638,
+        "numero_livro": 14,
+        "capitulo": "إثم القاطع (O pecado daquele que rompe os laços de parentesco)",
+        "narrador": "Jubair bin Mut'im",
+        "texto_arabe": "حدثنا يحيى بن بكير: حدثنا الليث، عن عقيل، عن ابن شهاب: أن محمد بن جبير بن مطعم قال: إن جبير بن مطعم أخبره: أنه سمع النبي ﷺ يقول: (لا يدخل الجنة قاطع).",
+        "traducao_portugues": "Narrado por Jubair bin Mut'im: Ouvi o Profeta dizer: 'Aquele que rompe os laços de parentesco não entrará no Paraíso.'"
+    },
+    {
+        "numero": 15,
+        "numero_bukhari": 5639,
+        "numero_livro": 15,
+        "capitulo": "من بسط له في الرزق بصلة الرحم (Aquele cuja riqueza foi aumentada por manter bons laços com parentes)",
+        "narrador": "Abu Huraira",
+        "texto_arabe": "حدثني إبراهيم بن المنذر: حدثنا محمد بن معن قال: حدثني أبي، عن سعيد ابن أبي سعيد، عن أبي هريرة رضي الله عنه قال: سمعت رسول الله ﷺ يقول: (من سره أن يبسط له في رزقه، وأن ينسأ له في أثره، فليصل رحمه).",
+        "traducao_portugues": "Narrado por Abu Huraira: Ouvi o Mensageiro de Allah dizer: 'Quem deseja que sua riqueza seja aumentada e sua vida seja prolongada, que mantenha bons laços com seus parentes.'"
+    },
+    {
+        "numero": 16,
+        "numero_bukhari": 5640,
+        "numero_livro": 16,
+        "capitulo": "من بسط له في الرزق بصلة الرحم (Aquele cuja riqueza foi aumentada por manter bons laços com parentes)",
+        "narrador": "Anas bin Malik",
+        "texto_arabe": "حدثنا يحيى بن بكير: حدثنا الليث، عن عقيل، عن ابن شهاب قال: أخبرني أنس بن مالك: أن رسول الله ﷺ قال: (من أحب أن يبسط له في رزقه، وينسأ له في أثره، فليصل رحمه).",
+        "traducao_portugues": "Narrado por Anas bin Malik: O Mensageiro de Allah disse: 'Quem ama que sua riqueza seja aumentada e sua vida seja prolongada, que mantenha bons laços com seus parentes.'"
+    },
+    {
+        "numero": 17,
+        "numero_bukhari": 5641,
+        "numero_livro": 17,
+        "capitulo": "من وصل وصله الله (Quem mantém laços, Allah mantém laços com ele)",
+        "narrador": "Abu Huraira",
+        "texto_arabe": "حدثني بشر بن محمد: أخبرنا عبد الله: أخبرنا معاوية بن أبي مزرد قال: سمعت عمي سعيد بن يسار يحدث، عن أبي هريرة، عن النبي ﷺ قال: (إن الله خلق الخلق، حتى إذا فرغ من خلقه، قالت الرحم: هذا مقام العائذ بك من القطيعة، قال: نعم، أما ترضين أن أصل من وصلك، وأقطع من قطعك؟ قالت: بلى يا رب، قال: فهو لك).",
+        "traducao_portugues": "Narrado por Abu Huraira: O Profeta disse: 'Allah criou as criaturas, e quando terminou de criá-las, o útero (laços de parentesco) disse: Este é o lugar daquele que busca refúgio em Ti da ruptura. Allah disse: Sim, não te agrada que Eu mantenha laços com quem te mantém laços e rompa com quem te rompe? Ela disse: Sim, ó Senhor. Allah disse: Então seja assim.'"
+    },
+    {
+        "numero": 18,
+        "numero_bukhari": 5642,
+        "numero_livro": 18,
+        "capitulo": "من وصل وصله الله (Quem mantém laços, Allah mantém laços com ele)",
+        "narrador": "Abu Huraira",
+        "texto_arabe": "حدثنا خالد بن مخلد: حدثنا سليمان: حدثنا عبد الله بن دينار، عن أبي صالح، عن أبي هريرة رضي الله عنه: عن النبي ﷺ قال: (إن الرحم شجنة من الرحمن، فقال الله: من وصلك وصلته، ومن قطعك قطعته).",
+        "traducao_portugues": "Narrado por Abu Huraira: O Profeta disse: 'O útero (laços de parentesco) é derivado do Nome Ar-Rahman (O Misericordioso). Allah disse: Quem mantiver laços contigo, Eu manterei laços com ele, e quem te romper, Eu o romperei.'"
+    },
+    {
+        "numero": 19,
+        "numero_bukhari": 5643,
+        "numero_livro": 19,
+        "capitulo": "من وصل وصله الله (Quem mantém laços, Allah mantém laços com ele)",
+        "narrador": "Aisha",
+        "texto_arabe": "حدثنا سعيد بن أبي مريم: حدثنا سليمان بن بلال قال: أخبرني معاوية ابن أبي مزرد، عن يزيد بن رومان، عن عروة، عن عائشة رضي الله عنها، زوج النبي ﷺ، عن النبي ﷺ قال: (الرحم شجنة، فمن وصلها وصلته، ومن قطعها قطعته).",
+        "traducao_portugues": "Narrado por Aisha, esposa do Profeta: O Profeta disse: 'O útero (laços de parentesco) é um ramo. Quem o mantém, Eu o mantenho, e quem o rompe, Eu o rompo.'"
+    },
+    {
+        "numero": 20,
+        "numero_bukhari": 5644,
+        "numero_livro": 20,
+        "capitulo": "تبل الرحم ببلالها (Manter os laços de parentesco com seus equivalentes)",
+        "narrador": "Amr bin Al-'As",
+        "texto_arabe": "حدثنا عمرو بن عباس: حدثنا محمد بن جعفر: حدثنا شعبة، عن إسماعيل بن أبي خالد، عن قيس بن أبي حازم: أن عمرو بن العاص قال: سمعت النبي ﷺ جهاراً غير سر يقول: (إن آل أبي - قال عمرو: في كتاب محمد بن جعفر بياض - ليسوا بأوليائي، إنما وليي الله وصالح المؤمنين). زاد عنبسة بن عبد الواحد، عن بيان، عن قيس، عن عمرو بن العاص قال: سمعت النبي ﷺ: (ولكن لهم رحم أبلها ببلالها). يعني أصلها بصلتها.",
+        "traducao_portugues": "Narrado por Amr bin Al-'As: Ouvi o Profeta dizer publicamente: 'A família de Abu não são meus protetores. Meu protetor é Allah e os crentes virtuosos.' Mas acrescentou: 'Eles têm laços de parentesco que devo manter conforme merecem.'"
+    },
+    {
+        "numero": 21,
+        "numero_bukhari": 5645,
+        "numero_livro": 21,
+        "capitulo": "ليس الواصل بالمكافئ (Não é o mantenedor de laços aquele que apenas retribui)",
+        "narrador": "Abdullah bin 'Amr",
+        "texto_arabe": "حدثنا محمد بن كثير: أخبرنا سفيان، عن الأعمش والحسن بن عمرو وفطر، عن مجاهد، عن عبد الله بن عمرو: قال سفيان: لم يرفعه الأعمش إلى النبي ﷺ، ورفعه حسن وفطر، عن النبي ﷺ قال: (ليس الواصل بالمكافئ، ولكن الواصل الذي إذا قطعت رحمه وصلها).",
+        "traducao_portugues": "Narrado por Abdullah bin 'Amr: O Profeta disse: 'Não é o mantenedor de laços aquele que apenas retribui a bondade, mas sim aquele que mantém os laços quando seus parentes os rompem.'"
+    },
+    {
+        "numero": 22,
+        "numero_bukhari": 5646,
+        "numero_livro": 22,
+        "capitulo": "من وصل رحمه في الشرك ثم أسلم (Quem manteve laços na idolatria e depois se converteu ao Islam)",
+        "narrador": "Hakim bin Hizam",
+        "texto_arabe": "حدثنا أبو اليمان: أخبرنا شعيب، عن الزهري قال: أخبرني عروة بن الزبير: أن حكيم بن حزام أخبره أنه قال: يا رسول الله، أرأيت أموراً كنت أتحنث بها في الجاهلية، من صلة، وعتاقة، وصدقة، هل كان لي فيها من أجر؟ قال حكيم: قال رسول الله ﷺ: (أسلمت على ما سلف من خير).",
+        "traducao_portugues": "Narrado por Hakim bin Hizam: Perguntei ao Mensageiro de Allah: 'O que dizes sobre minhas boas ações na época da ignorância, como manter laços, libertar escravos e dar caridade? Receberei recompensa por elas?' O Profeta disse: 'Converteste ao Islam com todas essas boas ações que fizeste.'"
+    },
+    {
+        "numero": 23,
+        "numero_bukhari": 5647,
+        "numero_livro": 23,
+        "capitulo": "من ترك صبية غيره حتى تلعب به، أو قبلها أو مازحها (Quem deixa uma criança brincar com ele, ou a beija ou brinca com ela)",
+        "narrador": "Umm Khalid bint Khalid bin Sa'id",
+        "texto_arabe": "حدثنا حبان: أخبرنا عبد الله، عن خالد بن سعيد، عن أبيه، عن أم خالد بنت خالد بن سعيد قالت: أتيت رسول الله ﷺ مع أبي وعلي قميص أصفر، قال رسول الله ﷺ: (سنه سنه). قال عبد الله: وهي بالحبشية: حسنة، قالت: فذهبت ألعب بخاتم النبوة فزبرني أبي، قال رسول الله ﷺ: (دعها). ثم قال رسول الله ﷺ: (أبلي وأخلقي، ثم أبلي وأخلقي، ثم أبلي وأخلقي).",
+        "traducao_portugues": "Narrado por Umm Khalid: Vim ao Mensageiro de Allah com meu pai e Ali, vestindo uma túnica amarela. O Profeta disse: 'Saneh, saneh' (bonita, bonita em língua etíope). Fui brincar com o anel da profecia e meu pai me repreendeu. O Profeta disse: 'Deixa-a.' Depois disse: 'Veste e desgasta, depois veste e desgasta, depois veste e desgasta.'"
+    },
+    {
+        "numero": 24,
+        "numero_bukhari": 5648,
+        "numero_livro": 24,
+        "capitulo": "رحمة الولد وتقبيله ومعانقته (A misericórdia com a criança, beijá-la e abraçá-la)",
+        "narrador": "Ibn 'Umar",
+        "texto_arabe": "حدثنا موسى بن إسماعيل: حدثنا مهدي: حدثنا ابن أبي يعقوب، عن ابن أبي نعم قال: كنت شاهداً لابن عمر، وسأله رجل عن دم البعوض، فقال: ممن أنت؟ فقال: من أهل العراق، قال: انظروا إلى هذا، يسألني عن دم البعوض، وقد قتلوا ابن النبي ﷺ، وسمعت النبي ﷺ يقول: (هما ريحانتاي من الدنيا).",
+        "traducao_portugues": "Narrado por Ibn 'Umar: Um homem perguntou sobre o sangue do mosquito. Ibn Umar disse: 'Olhai para este, pergunta-me sobre o sangue do mosquito enquanto mataram o filho do Profeta.' E ouvi o Profeta dizer sobre seus filhos: 'Eles são as duas flores perfumadas deste mundo.'"
+    },
+    {
+        "numero": 25,
+        "numero_bukhari": 5649,
+        "numero_livro": 25,
+        "capitulo": "رحمة الولد وتقبيله ومعانقته (A misericórdia com a criança, beijá-la e abraçá-la)",
+        "narrador": "Aisha",
+        "texto_arabe": "حدثنا أبو اليمان: أخبرنا شعيب، عن الزهري قال: حدثني عبد الله بن أبي بكر: أن عروة بن الزبير أخبره: أن عائشة زوج النبي ﷺ حدثته قالت: جاءتني امرأة معها ابنتان تسألني، فلم تجد عندي غير تمرة واحدة، فأعطيتها فقسمتها بين ابنتيها، ثم قامت فخرجت، فدخل النبي ﷺ فحدثته، فقال: (من يلي من هذه البنات شيئاً، فأحسن إليهن، كن له ستراً من النار).",
+        "traducao_portugues": "Narrado por Aisha: Uma mulher veio a mim com suas duas filhas pedindo algo, e eu só tinha uma tâmara. Dei-lhe e ela dividiu entre suas filhas. Quando o Profeta entrou, contei-lhe. Ele disse: 'Quem cuidar destas meninas e for bondoso com elas, será para ele um escudo contra o Fogo.'"
+    },
+    {
+        "numero": 26,
+        "numero_bukhari": 5650,
+        "numero_livro": 26,
+        "capitulo": "رحمة الولد وتقبيله ومعانقته (A misericórdia com a criança, beijá-la e abraçá-la)",
+        "narrador": "Abu Qatada",
+        "texto_arabe": "حدثنا أبو الوليد: حدثنا الليث: حدثنا سعيد المقبري: حدثنا عمرو بن سليم: حدثنا أبو قتادة قال: خرج علينا النبي ﷺ، وأمامة بنت أبي العاص على عاتقه، فصلى، فإذا ركع وضعها، وإذا رفع رفعها.",
+        "traducao_portugues": "Narrado por Abu Qatada: O Profeta saiu a nós com Ummamah, filha de Abu Al-'As, sobre seus ombros, e rezou. Quando se inclinava (ruku'), a colocava no chão, e quando se levantava, a pegava novamente."
+    },
+    {
+        "numero": 27,
+        "numero_bukhari": 5651,
+        "numero_livro": 27,
+        "capitulo": "رحمة الولد وتقبيله ومعانقته (A misericórdia com a criança, beijá-la e abraçá-la)",
+        "narrador": "Abu Huraira",
+        "texto_arabe": "حدثنا أبو اليمان: أخبرنا شعيب، عن الزهري قال: حدثنا أبو سلمة بن عبد الرحمن: أن أبا هريرة رضي الله عنه قال: قبل رسول الله ﷺ الحسن بن علي وعنده الأقرع بن حابس التميمي جالساً، فقال الأقرع: إن لي عشرة من الولد ما قبلت منهم أحداً، فنظر إليه رسول الله ﷺ ثم قال: (من لا يرحم لا يرحم).",
+        "traducao_portugues": "Narrado por Abu Huraira: O Mensageiro de Allah beijou Al-Hasan bin Ali enquanto Al-Aqra' bin Habis estava sentado. Al-Aqra' disse: 'Tenho dez filhos e nunca beijei nenhum deles.' O Profeta olhou para ele e disse: 'Quem não tem misericórdia, não receberá misericórdia.'"
+    },
+    {
+        "numero": 28,
+        "numero_bukhari": 5652,
+        "numero_livro": 28,
+        "capitulo": "رحمة الولد وتقبيله ومعانقته (A misericórdia com a criança, beijá-la e abraçá-la)",
+        "narrador": "Aisha",
+        "texto_arabe": "حدثنا محمد بن يوسف: حدثنا سفيان، عن هشام، عن عروة، عن عائشة رضي الله عنها قالت: جاء أعرابي إلى النبي ﷺ فقال: تقبلون الصبيان؟ فما نقبلهم، فقال النبي ﷺ: (أو أملك لك أن نزع الله من قلبك الرحمة).",
+        "traducao_portugues": "Narrado por Aisha: Um beduíno veio ao Profeta e disse: 'Vós beijais as crianças? Nós não as beijamos.' O Profeta disse: 'Posso eu fazer com que Allah arranque a misericórdia do teu coração?'"
+    },
+    {
+        "numero": 29,
+        "numero_bukhari": 5653,
+        "numero_livro": 29,
+        "capitulo": "رحمة الولد وتقبيله ومعانقته (A misericórdia com a criança, beijá-la e abraçá-la)",
+        "narrador": "Umar bin Al-Khattab",
+        "texto_arabe": "حدثنا ابن أبي مريم: حدثنا أبو غسان قال: حدثني زيد بن أسلم، عن أبيه، عن عمر بن الخطاب رضي الله عنه: قدم على النبي ﷺ سبي، فإذا امرأة من السبي قد تحلب ثديها تسقي، إذا وجدت صبياً في السبي أخذته، فألصقته ببطنها وأرضعته، فقال لنا النبي ﷺ: (أترون هذه طارحة ولدها في النار). قلنا: لا، وهي تقدر على أن لا تطرحه، فقال: (لله أرحم بعباده من هذه بولدها).",
+        "traducao_portugues": "Narrado por Umar bin Al-Khattab: Chegaram ao Profeta prisioneiros de guerra. Uma mulher dos prisioneiros estava amamentando. Quando encontrava uma criança entre os prisioneiros, pegava-a, colava-a em seu ventre e a amamentava. O Profeta nos disse: 'Pensais que esta jogaria seu filho no Fogo?' Dissemos: 'Não, e ela é capaz de não jogá-lo.' Ele disse: 'Allah é mais misericordioso com Seus servos do que esta com seu filho.'"
+    },
+    {
+        "numero": 30,
+        "numero_bukhari": 5654,
+        "numero_livro": 30,
+        "capitulo": "جعل الله الرحمة في مائة جزء (Allah colocou a misericórdia em cem partes)",
+        "narrador": "Abu Huraira",
+        "texto_arabe": "حدثنا الحكم بن نافع البهراني: أخبرنا شعيب، عن الزهري: أخبرنا سعيد بن المسيّب: أن أبا هريرة قال: سمعت رسول الله ﷺ يقول: (جعل الله الرحمة في مائة جزء، فأمسك عنده تسعة وتسعين جزءاً، وأنزل في الأرض جزءاً واحداً، فمن ذلك الجزء يتراحم الخلق، حتى ترفع الفرس حافرها عن ولدها، خشية أن تصيبه).",
+        "traducao_portugues": "Narrado por Abu Huraira: Ouvi o Mensageiro de Allah dizer: 'Allah colocou a misericórdia em cem partes. Reteve noventa e nove partes para Si e enviou uma parte à Terra. É dessa parte que as criaturas se compadecem, até que a égua levante seu casco do filho por medo de machucá-lo.'"
+    }
